@@ -1,0 +1,99 @@
+@charset "utf-8";
+
+/* light // dark theme */
+:root {
+    --background: #fff;
+    --text: #363636;
+    --heading-text: #000;
+    --anchor-text: #0076d1;
+    --code-background: #efefef;
+    --code-text: #000;
+    /* --primary-text:#fff;
+    --primary-background: #007CBD; */
+    --cursor-point:"pointer";
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+    --background: #202b38;
+    --text: #dbdbdb;
+    --heading-text: #fff;
+    --anchor-text: #0076d1;
+    --code-background: #161f27;
+    --code-text: #ffbe85;
+    /* --primary-text:#007CBD;
+    --primary-background: #fdfdfd; */
+    --cursor-point:"pointer";
+    }
+}
+
+body {
+    background: var(--background);
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+button {
+
+}
+
+h1,
+h2,
+h3 {
+    color: var(--heading-text);
+}
+
+p,
+dl {
+    color: var(--text);
+}
+
+a {
+    color: var(--anchor-text);
+    text-decoration: none;
+}
+
+code {
+    color: var(--code-text);
+    background: var(--code-background);
+    border-radius: 6px;
+    padding: 2.5px 5px;
+}
+  /* light // dark theme */
+
+input {
+    background-color: #fff;
+    outline: none;
+    border: 1px solid #F0F3F5;
+}
+
+input:focus {
+    border: 1px solid #9EA8B3;
+}
+
+.list_wrap {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list_wrap_bg {
+    width: 100%;
+    height: 100%;
+    background-color: #9EA8B3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.TodoList_complete_input {
+    background-color: #F5F7F9;
+    outline: none;
+}
