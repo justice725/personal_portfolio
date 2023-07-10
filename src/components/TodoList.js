@@ -30,7 +30,7 @@ function TodoList() {
 
     return (
         <div className="list_wrap">
-            <div className="list_wrap_bg">
+            <div className="list_wrap_bg bg_el1">
                 <TodoListStats />
                 <TodoListFilters />
 

@@ -21,7 +21,7 @@ function TodoListStats() {
     const formattedPercentCompleted = Math.round(percentCompleted * 100);
 
     return (
-        <ul className="total_list">
+        <ul className="total_list text2">
             <li className="total_list_item"><span>총 리스트 개수</span> <span>{totalNum}</span></li>
             <li className="total_list_item"><span>완료된 리스트 개수</span> <span>{totalCompletedNum}</span></li>
             <li className="total_list_item"><span>완료되지 않은 리스트 개수</span> <span>{totalUncompletedNum}</span></li>

@@ -1,0 +1,44 @@
+.themeToggleBox {
+    position: absolute;
+    bottom: 4%;
+    right: 4%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.themeChangeBtn {
+    position: relative;
+    text-indent: -9999%;
+    outline: none;
+    border-radius: 51%;
+    width: 40px;height: 40px;
+    z-index: 99;
+    cursor: pointer;
+}
+
+.absoluteBox {
+    position: relative;
+}
+
+.themeToggleText {
+    transition: text-indent 0.2s, opacity 0.2s, visibility 0.1s ;
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-indent: 10px;
+    right: -40px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 0;
+    text-align: right;
+}
+
+.absoluteBox:hover .themeToggleText {
+    opacity: 1;
+    visibility: visible;
+    text-indent: -110px;
+}
