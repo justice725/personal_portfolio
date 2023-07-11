@@ -1,14 +1,10 @@
 //recoil root
 import React from "react";
 import {
-  RecoilRoot,
-  atom,
-  selector,
-  useRecoilState,
-  useRecoilValue,
+    useRecoilValue
 } from 'recoil';
 //recoil root
-import { todoListStatsState } from "../selectors/todoListStatsStateSelector"
+import { todoListStatsState } from "../selectors/todoListStatsStateSelector";
 
 function TodoListStats() {
     const {
@@ -22,10 +18,10 @@ function TodoListStats() {
 
     return (
         <ul className="total_list text2">
-            <li className="total_list_item"><span>총 리스트 개수</span> <span>{totalNum}</span></li>
-            <li className="total_list_item"><span>완료된 리스트 개수</span> <span>{totalCompletedNum}</span></li>
-            <li className="total_list_item"><span>완료되지 않은 리스트 개수</span> <span>{totalUncompletedNum}</span></li>
-            <li className="total_list_item"><span>완료 퍼센트</span> <span>{formattedPercentCompleted}</span></li>
+            <li className="total_list_item"><span className="list_item_tit">총 리스트 개수</span> <span className="list_item_text">{totalNum}</span></li>
+            <li className="total_list_item"><span className="list_item_tit">완료된 리스트 개수</span> <span className="list_item_text">{totalCompletedNum}</span></li>
+            <li className="total_list_item"><span className="list_item_tit">완료되지 않은 리스트 개수</span> <span className="list_item_text">{totalUncompletedNum}</span></li>
+            <li className="total_list_item"><span className="list_item_tit">완료 퍼센트</span> <span className="list_item_text">{formattedPercentCompleted}</span></li>
         </ul>
     )
 }

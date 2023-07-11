@@ -37,7 +37,7 @@ function TodoList() {
                 <TodoItemCreator />
 
                 {plusState <= 0 ? (
-                    <div>영보다 작음</div>
+                    <div className=""> <span className="text1">아직 할 일이 없습니다.</span></div>
                 ) : (
                     ""
                 )}

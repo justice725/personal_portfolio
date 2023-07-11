@@ -1,12 +1,7 @@
 //recoil root
-import React, {useState} from "react";
+import React, { useState } from "react";
 import {
-  RecoilRoot,
-  atom,
-  selector,
-  useRecoilState,
-  useRecoilValue,
-  useSetRecoilState,
+    useSetRecoilState
 } from 'recoil';
 import { todoListState } from "../atoms/todoListState";
 //recoil root
@@ -23,7 +18,7 @@ function TodoItemCreator() {
         } // 리스트 인풋 value를 입력하지 않은 상태에서 추가를 누르면 alert창 생성 후 실행되지 않도록 함
 
         setTodoList((oldTodoList) => [
-            ...oldTodoList, 
+            ...oldTodoList,
             {
                 id:getId(),
                 text: inputValue,
@@ -47,7 +42,8 @@ function TodoItemCreator() {
             <div>
                 <input type="text" value={inputValue} onChange={onChange} />
                 <button onClick={addItem}>Add</button>
-            </div>    
+            </div>
+            <div className="cssVar">cssVar</div>
         </div>
         /* {
             TodoItem.index == "0" ? (

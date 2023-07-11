@@ -1,9 +1,10 @@
 @charset "utf-8";
+/* @import '../components/theme'; */
 
 /* light // dark theme */
 :root {
     --background: #fff;
-    --text: #363636;
+    --text: red;
     --heading-text: #000;
     --anchor-text: #0076d1;
     --code-background: #efefef;
@@ -16,7 +17,7 @@
 @media (prefers-color-scheme: dark) {
     :root {
     --background: #202b38;
-    --text: #dbdbdb;
+    --text: orange;
     --heading-text: #fff;
     --anchor-text: #0076d1;
     --code-background: #161f27;
@@ -30,7 +31,7 @@
 body {
     background: var(--background);
     line-height: 1.6;
-    max-width: 600px;
+    max-width: 1200px;
     margin: 0 auto;
     overflow-x: hidden;
 }
@@ -100,5 +101,9 @@ input:focus {
 
 ul {
     list-style: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-inline-start: 0;
 }
-

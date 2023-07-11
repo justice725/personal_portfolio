@@ -1,3 +1,5 @@
+/* @import '../components/theme'; */
+
 .themeToggleBox {
     position: absolute;
     bottom: 4%;
@@ -9,7 +11,7 @@
 
 .themeChangeBtn {
     position: relative;
-    text-indent: -9999%;
+    text-indent: -9999px;
     outline: none;
     border-radius: 51%;
     width: 40px;height: 40px;
@@ -41,4 +43,45 @@
     opacity: 1;
     visibility: visible;
     text-indent: -110px;
+}
+
+
+
+.total_list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+
+    .total_list_item {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .list_item_tit {
+        
+    }
+}
+
+.todosSelectTit {
+
+}
+
+.filterBox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    .todosSelectTit {
+        outline: none;
+        padding: 4px;
+        box-sizing: border-box;
+        
+    }
 }

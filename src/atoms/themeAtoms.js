@@ -2,7 +2,7 @@ import { atom } from "recoil";
 import '../css/todoListCss.scss';
 
 
-const localStorageEffect = 
+const localStorageEffect = // 페이지 로딩시 테마 적용하기 위해서 로컬 스토리지에 해당 데이터 저장
     (key) => 
     ({setSelf, onSet}) => {
         const savedData = localStorage.getItem(key);
@@ -93,3 +93,13 @@ export const darkTheme = {
 
 
 };
+
+const cssVar = (name) => `var(--${name})`;
+
+export const themedPalette = {
+    text: cssVar('text'),
+    background: cssVar('background'),
+};
+// styled-components에서 css variable 사용하는 방법--
+// 여기서 초기 세팅
+// scss에서 root 설정 해야함

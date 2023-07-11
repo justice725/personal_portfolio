@@ -14,9 +14,9 @@ import {
 import CharacterCounter from './components/CharacterCounter';
 import TodoList from './components/TodoList';
 
-// styled components 
+// styled components
 import Button from "./css/styled-button";
-// styled components 
+// styled components
 
 // css
 import './css/todoListCss.scss';
@@ -46,7 +46,7 @@ function App() {
         {/* <Button color=""
         >common button</Button>
         <Button primary>primary button</Button>
-        <Button children={"버튼 텍스트 맞나요"}></Button> */}
+        <Button children={"버튼 텍스트"}></Button> */}
         
         {/* <CharacterCounter /> */}
         {/* <StyledButton>styled-components test</StyledButton> */}
