@@ -3,28 +3,34 @@
 
 /* light // dark theme */
 :root {
+    // scss 에서 초기세팅 한 값
     --background: #fff;
     --text: red;
+    // scss 에서 초기세팅 한 값
+
     --heading-text: #000;
     --anchor-text: #0076d1;
     --code-background: #efefef;
     --code-text: #000;
     /* --primary-text:#fff;
     --primary-background: #007CBD; */
-    --cursor-point:"pointer";
+    --cursor-point:pointer;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
+    // scss 에서 초기세팅 한 값
     --background: #202b38;
     --text: orange;
+    // scss 에서 초기세팅 한 값
+
     --heading-text: #fff;
     --anchor-text: #0076d1;
     --code-background: #161f27;
     --code-text: #ffbe85;
     /* --primary-text:#007CBD;
     --primary-background: #fdfdfd; */
-    --cursor-point:"pointer";
+    --cursor-point:pointer;
     }
 }
 
@@ -92,11 +98,13 @@ input:focus {
     align-items: center;
     flex-direction: column;
     padding: 20px;
+    
 }
 
 .TodoList_complete_input {
     background-color: #F5F7F9;
     outline: none;
+    cursor: var(--cursor-point);
 }
 
 ul {

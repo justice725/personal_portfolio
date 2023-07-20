@@ -100,6 +100,7 @@ export const themedPalette = {
     text: cssVar('text'),
     background: cssVar('background'),
 };
+
 // styled-components에서 css variable 사용하는 방법--
 // 여기서 초기 세팅
 // scss에서 root 설정 해야함

@@ -30,6 +30,7 @@ import GlobalStyle from './components/theme';
 
 // theme
 import ThemeChange from './components/themeComponents/themeChange';
+import GlobalHeader from './components/menuComponents/header';
 // theme
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
     
         <ThemeProvider theme={theme == 'light' ? lightTheme : darkTheme}>
           <GlobalStyle />
+          {/* <GlobalHeader></GlobalHeader> */}
         <TodoList />
         {/* <Button color=""
         >common button</Button>

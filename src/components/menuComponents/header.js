@@ -13,7 +13,7 @@ function GlobalHeader() {
   const navigate = useNavigate();
 
   const goToTodolist = () => {
-    navigate('');
+    navigate('/todoList');
   }
 
   const  goToOther = () => {
@@ -29,8 +29,8 @@ function GlobalHeader() {
         </div>
         <div>
           <ul>
-            <li><a onClick={goToTodolist}>오늘의 할일</a></li>
-            <li><a onClick={goToOther}>다른 메뉴</a></li>
+            <li><a onClick={goToTodolist}>todoList</a></li>
+            <li><a onClick={goToOther}>서브메뉴</a></li>
           </ul>
         </div>
       </header>

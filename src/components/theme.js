@@ -66,9 +66,10 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     .cssVar {
+        color:${themedPalette.text};
         background: ${themedPalette.background};
     }
-
+    
 `;
 // themedPalette -> styled-components에서 css variable 사용하는 방법--
 // themeAtoms.js 에서 초기 세팅 및 변수화 진행
