@@ -9,6 +9,7 @@ import {
   useSetRecoilState,
 } from 'recoil';
 //recoil root
+
 import TodoListStats from "./TodoListStats";
 import { todoListState } from "../atoms/todoListState";
 import { listLength } from "../selectors/todoListStatsStateSelector";
@@ -35,7 +36,7 @@ function TodoItem({item, plusState}) {
         });
 
         setTodoList(newList);
-    } // 
+    } //
 
     const deleteItem = () => {
         const newList = removeItemAtIndex(todoList, index);

@@ -1,5 +1,5 @@
 import { atom } from "recoil";
-import '../css/todoListCss.scss';
+import '../../todoList/css/todoListCss.scss';
 
 
 const localStorageEffect = // 페이지 로딩시 테마 적용하기 위해서 로컬 스토리지에 해당 데이터 저장
@@ -21,7 +21,7 @@ const localStorageEffect = // 페이지 로딩시 테마 적용하기 위해서 
 export const themesAtom = atom({
     key:'themesAtoms',
     default:'light',
-    effects:[localStorageEffect('light')],
+    effects:[localStorageEffect('light')], // 스토리지에 등록되어 있을 값 초기는 light
     /* effects: [
         ({setSelf, onSet}) => {
             const savedData = sessionStorage.getItem('');

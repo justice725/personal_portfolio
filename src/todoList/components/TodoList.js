@@ -10,14 +10,12 @@ import {
 //recoil root
 
 import { todoListState } from "../atoms/todoListState";
-import TodoItemCreator from "./TodoItemCreator";
-/* import TodoList from ''; */
-import TodoListStats from "./TodoListStats";
-import TodoItem from "./TodoItem";
-import TodoListFilters from "./TodoListFilters";
-import { filteredTodoListState } from "../selectors/filteredTodoListStateSelector";
+import TodoItemCreator from './TodoItemCreator';
+import TodoListStats from './TodoListStats';
+import TodoListFilters from './TodoListFilters';
+import {filteredTodoListState} from '../selectors/filteredTodoListStateSelector';
 import { todoListFilterState } from "../atoms/todoListState";
-
+import TodoItem from './TodoItem';
 
 function TodoList() {
     /* const todoList = useRecoilValue(todoListState); */

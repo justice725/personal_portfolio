@@ -13,9 +13,9 @@ export const filteredTodoListState = selector({
                 return list.filter((item) => item.isComplete);
             case 'Show Uncompleted':
                 return list.filter((item) => !item.isComplete);
-            default:
+            default: // 기본값은 todoListFilterState의 값인 Show All 이다.
                 return list;
-            // todoItem.js에서 인자 item의 속성에 대해서 정의해 놓은 것이 있는데 확인해보면 될듯? 
+            // todoItem.js에서 인자 item의 속성에 대해서 정의해 놓은 것이 있는데 확인해보면 될듯?
         }
     },
 })

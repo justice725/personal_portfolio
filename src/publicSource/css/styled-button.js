@@ -1,6 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
-import '../css/todoListCss.scss';
+/* import '../css/todoListCss.scss'; */
+import '../../todoList/css/todoListCss.scss';
 
 const StyledButton = styled.button`
     // 버튼 공통 스타일 적용

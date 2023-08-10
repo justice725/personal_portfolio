@@ -1,5 +1,5 @@
 import { selector, useSetRecoilState } from "recoil";
-import { themesAtom } from "../../atoms/themeAtoms";
+import { themesAtom } from "../atoms/themeAtoms";
 
 export const currentThemeSelector = selector({
     key: 'currentThemeSelector',

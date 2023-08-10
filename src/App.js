@@ -11,26 +11,28 @@ import {
   useRecoilValue,
 } from 'recoil';
 
-import CharacterCounter from './components/CharacterCounter';
-import TodoList from './components/TodoList';
+
+import CharacterCounter from './todoList/components/CharacterCounter';
+import TodoList from './todoList/components/TodoList';
 
 // styled components
-import Button from "./css/styled-button";
+import Button from './publicSource/css/styled-button';
 // styled components
 
 // css
-import './css/todoListCss.scss';
-import './css/darkmode.scss';
+import './todoList/css/todoListCss.scss';
+import './theme/css/darkmode.scss';
 
 import { ThemeProvider } from 'styled-components';
-import { themesAtom } from './atoms/themeAtoms';
-import {lightTheme, darkTheme} from './atoms/themeAtoms';
-import GlobalStyle from './components/theme';
+import {themesAtom} from './theme/atoms/themeAtoms';
+import { lightTheme, darkTheme } from './theme/atoms/themeAtoms';
+import GlobalStyle from './theme/atoms/theme';
+
 // css
 
 // theme
-import ThemeChange from './components/themeComponents/themeChange';
-import GlobalHeader from './components/menuComponents/header';
+import ThemeChange from './theme/components/themeChange';
+import GlobalHeader from './menu/components/header';
 // theme
 
 function App() {

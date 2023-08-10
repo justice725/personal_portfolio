@@ -3,10 +3,10 @@ import React from "react";
 import {
     useRecoilState, useRecoilValue
 } from 'recoil';
-import { themesAtom } from "../../atoms/themeAtoms";
-import '../../css/darkmode.scss';
-import { currentThemeSelector } from "../../selectors/themeSelector/themeCurrentSelector";
 
+import { themesAtom } from "../atoms/themeAtoms";
+import '../css/darkmode.scss';
+import {currentThemeSelector} from '../selectors/themeCurrentSelector';
 
 
 /* import LocalStorage from "../../storage/LocalStorage"; */

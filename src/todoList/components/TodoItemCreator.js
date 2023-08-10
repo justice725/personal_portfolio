@@ -43,7 +43,7 @@ function TodoItemCreator() {
                 <input type="text" value={inputValue} onChange={onChange} />
                 <button onClick={addItem}>Add</button>
             </div>
-            <div className="cssVar">cssVar</div>
+            /*<div className="cssVar">cssVar</div>*/
         </div>
         /* {
             TodoItem.index == "0" ? (

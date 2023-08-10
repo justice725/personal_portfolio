@@ -9,8 +9,8 @@ import {
 } from 'recoil';
 //recoil root
 
-import TextInput from "./TextInput";
-import { charCountState } from "../selectors/charCountStateSelectors";
+import TextInput from './TextInput';
+import {charCountState} from '../selectors/charCountStateSelectors';
 
 
 function CharacterCounter() {

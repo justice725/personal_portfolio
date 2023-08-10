@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
-import { themedPalette } from '../atoms/themeAtoms';
+import { themedPalette } from './themeAtoms';
+
 
 const cssVar = (name) => `var(==${name})`;
 
