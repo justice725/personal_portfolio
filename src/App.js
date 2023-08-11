@@ -12,8 +12,10 @@ import {
 } from 'recoil';
 
 
+
 import CharacterCounter from './todoList/components/CharacterCounter';
-import TodoList from './todoList/components/TodoList';
+import TodoWrap from './todoList/components/todolistWrap';
+import BlogWrap from './miniBlog/components/blogWrap';
 
 // styled components
 import Button from './publicSource/css/styled-button';
@@ -45,16 +47,10 @@ function App() {
     
         <ThemeProvider theme={theme == 'light' ? lightTheme : darkTheme}>
           <GlobalStyle />
-          {/* <GlobalHeader></GlobalHeader> */}
-        <TodoList />
-        {/* <Button color=""
-        >common button</Button>
-        <Button primary>primary button</Button>
-        <Button children={"버튼 텍스트"}></Button> */}
-        
-        {/* <CharacterCounter /> */}
-        {/* <StyledButton>styled-components test</StyledButton> */}
-        
+
+          <GlobalHeader />
+          
+
         <ThemeChange></ThemeChange>
         </ThemeProvider>
       
@@ -70,3 +66,11 @@ export default App;
 // 라벨온 css 건들일 때 소스 공유
 
 // https://velog.io/@velopert/velog-dark-mode
+
+{/* <Button color=""
+        >common button</Button>
+        <Button primary>primary button</Button>
+        <Button children={"버튼 텍스트"}></Button> */}
+        
+        {/* <CharacterCounter /> */}
+        {/* <StyledButton>styled-components test</StyledButton> */}

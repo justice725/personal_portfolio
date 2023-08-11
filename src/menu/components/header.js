@@ -7,7 +7,10 @@ import {
   useRecoilValue,
 } from 'recoil';
 
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+import navLinks from "./navLinks";
+import Nav from "./nav";
+
 
 function GlobalHeader() {
   const navigate = useNavigate();
@@ -23,16 +26,11 @@ function GlobalHeader() {
 
     return (
       <>
-      <header className="globalHeaderWrap">
+      <header className="globalHeaderWrap" style={{height:'100px'}}>
         <div className="logoBox">
           <image src="" ></image>
         </div>
-        <div>
-          <ul>
-            <li><a onClick={goToTodolist}>todoList</a></li>
-            <li><a onClick={goToOther}>서브메뉴</a></li>
-          </ul>
-        </div>
+        <Nav></Nav>
       </header>
       </>
     );
