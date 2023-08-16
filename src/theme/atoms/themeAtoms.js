@@ -3,7 +3,7 @@ import '../../todoList/css/todoListCss.scss';
 
 
 const localStorageEffect = // 페이지 로딩시 테마 적용하기 위해서 로컬 스토리지에 해당 데이터 저장
-    (key) => 
+    (key) =>
     ({setSelf, onSet}) => {
         const savedData = localStorage.getItem(key);
         if(savedData != null) {
@@ -66,7 +66,7 @@ export const lightTheme = {
     border2: '#ADB5BD',
     border3: '#DEE2E6',
     border4: '#F1F3F5',
-
+    
 
 };
 
@@ -99,6 +99,7 @@ const cssVar = (name) => `var(--${name})`;
 export const themedPalette = {
     text: cssVar('text'),
     background: cssVar('background'),
+    bgEl4:cssVar('bg-el4'),
 };
 
 // styled-components에서 css variable 사용하는 방법--

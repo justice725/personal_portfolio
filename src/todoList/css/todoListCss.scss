@@ -1,75 +1,3 @@
-@charset "utf-8";
-/* @import '../components/theme'; */
-
-/* light // dark theme */
-:root {
-    // scss 에서 초기세팅 한 값
-    --background: #fff;
-    --text: red;
-    // scss 에서 초기세팅 한 값
-
-    --heading-text: #000;
-    --anchor-text: #0076d1;
-    --code-background: #efefef;
-    --code-text: #000;
-    /* --primary-text:#fff;
-    --primary-background: #007CBD; */
-    --cursor-point:pointer;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-    // scss 에서 초기세팅 한 값
-    --background: #202b38;
-    --text: orange;
-    // scss 에서 초기세팅 한 값
-
-    --heading-text: #fff;
-    --anchor-text: #0076d1;
-    --code-background: #161f27;
-    --code-text: #ffbe85;
-    /* --primary-text:#007CBD;
-    --primary-background: #fdfdfd; */
-    --cursor-point:pointer;
-    }
-}
-
-body {
-    background: var(--background);
-    line-height: 1.6;
-    max-width: 1200px;
-    margin: 0 auto;
-    overflow-x: hidden;
-}
-
-button {
-
-}
-
-h1,
-h2,
-h3 {
-    color: var(--heading-text);
-}
-
-p,
-dl {
-    color: var(--text);
-}
-
-a {
-    color: var(--anchor-text);
-    text-decoration: none;
-}
-
-code {
-    color: var(--code-text);
-    background: var(--code-background);
-    border-radius: 6px;
-    padding: 2.5px 5px;
-}
-  /* light // dark theme */
-
 input {
     background-color: #fff;
     outline: none;
@@ -105,13 +33,4 @@ input:focus {
     background-color: #F5F7F9;
     outline: none;
     cursor: var(--cursor-point);
-}
-
-ul {
-    list-style: none;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    margin-inline-start: 0;
-    margin-inline-end: 0;
-    padding-inline-start: 0;
 }

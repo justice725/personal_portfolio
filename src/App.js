@@ -1,39 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
 
 //recoil root
-import React, { useCallback, useEffect } from "react";
+import React from "react";
 import {
-  RecoilRoot,
-  atom,
-  selector,
-  useRecoilState,
-  useRecoilValue,
+  useRecoilState
 } from 'recoil';
 
 
 
-import CharacterCounter from './todoList/components/CharacterCounter';
-import TodoWrap from './todoList/components/todolistWrap';
-import BlogWrap from './miniBlog/components/blogWrap';
 
 // styled components
-import Button from './publicSource/css/styled-button';
 // styled components
 
 // css
-import './todoList/css/todoListCss.scss';
+import './publicSource/css/public.scss';
 import './theme/css/darkmode.scss';
 
+
 import { ThemeProvider } from 'styled-components';
-import {themesAtom} from './theme/atoms/themeAtoms';
-import { lightTheme, darkTheme } from './theme/atoms/themeAtoms';
 import GlobalStyle from './theme/atoms/theme';
+import { darkTheme, lightTheme, themesAtom } from './theme/atoms/themeAtoms';
 
 // css
 
 // theme
-import ThemeChange from './theme/components/themeChange';
 import GlobalHeader from './menu/components/header';
 // theme
 
@@ -41,22 +30,17 @@ function App() {
 
   const [theme, setTheme] = useRecoilState(themesAtom);
 
-  return (
+  if(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+  }
 
-    // 여기는 atoms랑 selectors 를 가지고 인풋에 텍스트를 집어넣었을 때 상태변화를 보여주는 컴포넌트입니다.
-    
+  return (
         <ThemeProvider theme={theme == 'light' ? lightTheme : darkTheme}>
           <GlobalStyle />
 
           <GlobalHeader />
-          
 
-        <ThemeChange></ThemeChange>
         </ThemeProvider>
-      
-    // 여기는 atoms랑 selectors 를 가지고 인풋에 텍스트를 집어넣었을 때 상태변화를 보여주는 컴포넌트입니다.
-
-    
   );
 }
 

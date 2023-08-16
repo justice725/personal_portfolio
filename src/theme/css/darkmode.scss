@@ -1,29 +1,43 @@
 /* @import '../components/theme'; */
 
 .themeToggleBox {
-    position: absolute;
-    bottom: 4%;
-    right: 4%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    /* position: absolute; */
+
+    .absoluteBox {
+        height: 3rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        width: 3rem;
+        height: 3rem;
+        position: relative;
+
+        &:hover {
+            background-color: var(--bg-el4);
+        }
+    }
+
+    /* icon */
+    .darkImg {
+    width: 3rem;
+    }
+
+    .lightImg {
+    width: 3rem;
+    }
+    /* icon */
 }
 
-.themeChangeBtn {
+/* .themeChangeBtn {
     position: relative;
     text-indent: -9999px;
     outline: none;
     border-radius: 51%;
-    width: 40px;height: 40px;
     z-index: 99;
     cursor: pointer;
-}
+} */
 
-.absoluteBox {
-    position: relative;
-}
-
-.themeToggleText {
+/* .themeToggleText {
     transition: text-indent 0.2s, opacity 0.2s, visibility 0.1s ;
     position: absolute;
     width: 100px;
@@ -43,7 +57,7 @@
     opacity: 1;
     visibility: visible;
     text-indent: -110px;
-}
+} */
 
 
 
@@ -61,14 +75,6 @@
         align-items: center;
         flex-direction: column;
     }
-
-    .list_item_tit {
-        
-    }
-}
-
-.todosSelectTit {
-
 }
 
 .filterBox {
@@ -82,6 +88,5 @@
         outline: none;
         padding: 4px;
         box-sizing: border-box;
-        
     }
 }

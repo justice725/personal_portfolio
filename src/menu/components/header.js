@@ -10,7 +10,7 @@ import {
 import { useNavigate, Link } from "react-router-dom";
 import navLinks from "./navLinks";
 import Nav from "./nav";
-
+import '../../publicSource/css/public.scss';
 
 function GlobalHeader() {
   const navigate = useNavigate();
@@ -26,7 +26,7 @@ function GlobalHeader() {
 
     return (
       <>
-      <header className="globalHeaderWrap" style={{height:'100px'}}>
+      <header className="globalHeaderWrap">
         <div className="logoBox">
           <image src="" ></image>
         </div>
