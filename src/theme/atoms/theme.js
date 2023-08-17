@@ -71,6 +71,10 @@ export const GlobalStyle = createGlobalStyle`
     .bgEl4 {
         background: ${themedPalette.bgEl4};
     }
+
+    .br3 {
+        border-color:${themedPalette.border3};
+    }
     
 `;
 // themedPalette -> styled-components에서 css variable 사용하는 방법--

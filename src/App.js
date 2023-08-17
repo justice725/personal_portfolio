@@ -4,27 +4,24 @@ import React from "react";
 import {
   useRecoilState
 } from 'recoil';
+import { Routes,Route,Link } from "react-router-dom";
 
-
-
-
-// styled components
-// styled components
 
 // css
 import './publicSource/css/public.scss';
 import './theme/css/darkmode.scss';
-
-
-import { ThemeProvider } from 'styled-components';
-import GlobalStyle from './theme/atoms/theme';
-import { darkTheme, lightTheme, themesAtom } from './theme/atoms/themeAtoms';
-
 // css
 
 // theme
-import GlobalHeader from './menu/components/header';
+import { ThemeProvider } from 'styled-components';
+import GlobalStyle from './theme/atoms/theme';
+import { darkTheme, lightTheme, themesAtom } from './theme/atoms/themeAtoms';
 // theme
+
+// header
+import GlobalHeader from './menu/components/header';
+import navLinks from "./menu/components/navLinks";
+// header
 
 function App() {
 
@@ -39,6 +36,15 @@ function App() {
           <GlobalStyle />
 
           <GlobalHeader />
+
+          <Routes>
+          {
+            navLinks.map((nav) => (
+                <Route path={nav.link} element={nav.ruth}></Route>
+            ))
+          }
+          </Routes>
+          <div style={{height:"300vh"}}></div>
 
         </ThemeProvider>
   );

@@ -11,9 +11,11 @@ import { useNavigate, Link } from "react-router-dom";
 import navLinks from "./navLinks";
 import Nav from "./nav";
 import '../../publicSource/css/public.scss';
+import { styled } from "styled-components";
+import ScrollProgress from "../../publicSource/components/scroll/ScrollProgress";
 
 function GlobalHeader() {
-  const navigate = useNavigate();
+  /* const navigate = useNavigate();
 
   const goToTodolist = () => {
     navigate('/todoList');
@@ -21,19 +23,25 @@ function GlobalHeader() {
 
   const  goToOther = () => {
     navigate('');
-  }
+  } */
   
-
     return (
-      <>
-      <header className="globalHeaderWrap">
-        <div className="logoBox">
-          <image src="" ></image>
-        </div>
-        <Nav></Nav>
-      </header>
-      </>
+      <HeaderWrapper>
+        <header className="globalHeaderWrap">
+          <Nav></Nav>
+        </header>
+        <ScrollProgress></ScrollProgress>
+      </HeaderWrapper>
     );
 };
+
+const HeaderWrapper = styled.div`
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  position:fixed;
+  top:0;
+  left:0;
+`
 
 export default GlobalHeader;

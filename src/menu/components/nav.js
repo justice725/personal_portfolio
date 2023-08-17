@@ -6,7 +6,7 @@ import navLinks from "./navLinks";
 const Nav = () => {
     return (
         <>
-        <nav className='globalNav pt_8'>
+        <nav className='globalNav'>
             <div className='gNWrap just_spacebetween'>
                 <div>
                     {navLinks.map((nav) => (
@@ -21,15 +21,6 @@ const Nav = () => {
                 </div>
             </div>
         </nav>
-
-        
-        <Routes>
-        {
-            navLinks.map((nav) => (
-                <Route path={nav.link} element={nav.ruth}></Route>
-            ))
-        }
-        </Routes>
         </>
     );
 };

@@ -66,8 +66,6 @@ export const lightTheme = {
     border2: '#ADB5BD',
     border3: '#DEE2E6',
     border4: '#F1F3F5',
-    
-
 };
 
 export const darkTheme = {
@@ -90,8 +88,6 @@ export const darkTheme = {
     border2: '#A0A0A0',
     border3: '#4D4D4D',
     border4: '#2A2A2A',
-
-
 };
 
 const cssVar = (name) => `var(--${name})`;
@@ -100,6 +96,8 @@ export const themedPalette = {
     text: cssVar('text'),
     background: cssVar('background'),
     bgEl4:cssVar('bg-el4'),
+    border3:cssVar('border3'),
+    border4:cssVar('border4'),
 };
 
 // styled-components에서 css variable 사용하는 방법--

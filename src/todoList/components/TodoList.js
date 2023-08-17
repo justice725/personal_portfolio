@@ -1,21 +1,15 @@
 //recoil root
-import React, {useState} from "react";
+import React, { useEffect, useState } from "react";
 import {
-  RecoilRoot,
-  atom,
-  selector,
-  useRecoilState,
-  useRecoilValue,
+    useRecoilValue
 } from 'recoil';
 //recoil root
+import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 
-import { todoListState } from "../atoms/todoListState";
+import { filteredTodoListState } from '../selectors/filteredTodoListStateSelector';
 import TodoItemCreator from './TodoItemCreator';
-import TodoListStats from './TodoListStats';
 import TodoListFilters from './TodoListFilters';
-import {filteredTodoListState} from '../selectors/filteredTodoListStateSelector';
-import { todoListFilterState } from "../atoms/todoListState";
-import TodoItem from './TodoItem';
+import TodoListStats from './TodoListStats';
 
 function TodoList() {
     /* const todoList = useRecoilValue(todoListState); */
@@ -25,6 +19,35 @@ function TodoList() {
 
     const [useList, setUseState] = useState(0);
     const plusState = useList + todoList.length;
+
+
+    /* const handleEnd = (result) => {
+        if(!result.destination) return;
+
+        const currentTags = [...tags];
+        const draggingItemIndex = result.source.index;
+        const afterDragItemIndex = result.destination.index;
+
+        const removeTag = currentTags.splice(draggingItemIndex, 1);
+
+        currentTags.splice(afterDragItemIndex, 0, removeTag[0]);
+
+        setTags(currentTags);
+    } */
+
+    const [enabled, setEnabled] = useState(false);
+    useEffect(() => {
+        const animation = requestAnimationFrame(() => setEnabled(true));
+
+        return() => {
+            cancelAnimationFrame(animation);
+            setEnabled(false);
+        }
+    }, []);
+
+    if(!enabled) {
+        return null;
+    }
 
     return (
         <div className="list_wrap">
@@ -40,12 +63,41 @@ function TodoList() {
                     ""
                 )}
 
-                {todoList.map((todoItem) => (
-                    
-                    <TodoItem key={todoItem.id} item={todoItem} plusState={plusState}/>
-                ))}
+                <DragDropContext>
+                    <Droppable droppableId="tags">
+                        {(provided) => (
+                            <div className="tags" {...provided.droppableProps} ref={provided.innerRef}>
+                                {todoList.map((todoItem, index) => (
+                                    
+                                    <Draggable key={todoItem.id} draggableId={todoItem.id} index={index}>
+                                        {(provided) => (
+                                            <div ref={provided.innerRef}
+                                            {...provided.draggableProps}
+                                            {...provided.dragHandleProps}
+                                            >
+                                                {todoItem.text}
+                                            </div>
+                                        )}
+                                    </Draggable>
+                                ))}
+                            </div>
+                        )}
+                    </Droppable>
+                </DragDropContext>
+
+                {/* <TodoItem key={todoItem.id} item={todoItem} plusState={plusState}/> */}
                 {/* UI는 todoListFilterState의 기본값인 "Show All"과 동일하다. 필터를 변경하려면 우리는 TodoListFilter 컴포넌트를 구현해야 한다 */}
 
+                {/* <TodoItem
+                                                ref={provided.innerRef}
+                                                {...provided.draggableProps}
+                                                {...provided.dragHandleProps}
+                                                key={todoItem.id}
+                                                item={todoItem}
+                                                plusState={plusState}
+                                                >
+                                            </TodoItem> */}
+                                            {/* <TodoItem key={todoItem.id} item={todoItem} plusState={plusState} /> */}
             </div>
         </div>
     )

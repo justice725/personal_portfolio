@@ -1,33 +1,46 @@
 import React, {
-    useState,
-    useCallback,
-    useEffect,
-    useRef,
-    MouseEvent,
+  memo,
+  useCallback,
+  useEffect,
+  useRef,
+  useState
 } from 'react';
 import { styled } from 'styled-components';
 
-const ScrollProgress = () => {
+const ScrollProgress = memo(() => {
     const [width, setWidth] = useState(0);
-    // 스크롤 진행도에 따른 상태관리
-
     const progressRef = useRef(null);
-    // 가장 부모 태그에 ref를 걸어주기 위한 변수
+  
+    const handleScroll = useCallback(() => {
+      const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+  
+      if (scrollTop === 0) {
+        setWidth(0);
+        return;
+      }
+  
+      const windowHeight = scrollHeight - clientHeight;
+      const currentPercent = (scrollTop / windowHeight);
+  
+      setWidth(currentPercent * 100);
+    }, []);
+    
+    useEffect(() => {
+      window.addEventListener('scroll', handleScroll, true);
+  
+      return () => {
+        window.removeEventListener('scroll', handleScroll, true);
+      }
+    }, [handleScroll]);
 
     return(
         <>
-            {/* <div className='ScrollProgress' ref={progressRef}>
-                <div className='ScrollProgress_progress' style={{width:width+'%'}}>
-
-                </div>
-            </div> */}
             <ScrollProgressBox ref={progressRef}>
-                <ScrollProgress_progress style={{width:width+'%'}}>
-                </ScrollProgress_progress>
+                <ScrollProgress_progress style={{width:width+'%'}} />
             </ScrollProgressBox>
         </>
     )
-}
+});
 
 const ScrollProgressBox = styled.div `
     width:100%;
@@ -36,6 +49,7 @@ const ScrollProgressBox = styled.div `
     position:relative;
 
     z-index:10;
+    cursor:pointer;
 `
 
 const ScrollProgress_progress = styled.div`

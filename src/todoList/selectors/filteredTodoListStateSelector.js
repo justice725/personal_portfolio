@@ -18,6 +18,8 @@ export const filteredTodoListState = selector({
             // todoItem.js에서 인자 item의 속성에 대해서 정의해 놓은 것이 있는데 확인해보면 될듯?
         }
     },
+    default:false,
+    
 })
 
 // filteredTodoListState는 내부적으로 2개의 의존성 todoListFilterState와 todoListState를 추적한다. 그래서 둘 중 하나라도 변하면 filteredTodoListState는 재실행된다.

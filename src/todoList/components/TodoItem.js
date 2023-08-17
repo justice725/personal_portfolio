@@ -1,20 +1,14 @@
 //recoil root
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
-  RecoilRoot,
-  atom,
-  selector,
-  useRecoilState,
-  useRecoilValue,
-  useSetRecoilState,
+    useRecoilState
 } from 'recoil';
 //recoil root
+import { Draggable } from "react-beautiful-dnd";
 
-import TodoListStats from "./TodoListStats";
+
 import { todoListState } from "../atoms/todoListState";
-import { listLength } from "../selectors/todoListStatsStateSelector";
 
-import { useState } from "react";
 
 function TodoItem({item, plusState}) {
     const [todoList, setTodoList] = useRecoilState(todoListState);
@@ -44,13 +38,50 @@ function TodoItem({item, plusState}) {
         setTodoList(newList);
     } // 리스트 삭제
 
+    /* const onDragEnd = ({source, destination}) => {
+        if(!destination) return;
+
+        const scourceKey = source.droppableId;
+        const destinationKey = destination.droppableId;
+
+        const _items = JSON.parse(JSON.stringify(items));
+        const [targetItem] = _items[scourceKey].splice(source.index, 1);
+        _items[destinationKey].splice(destination.index,0,targetItem);
+        setItems(_items);
+    } */
+
+    const [enabled, setEnabled] = useState(false);
+    useEffect(() => {
+        const animation = requestAnimationFrame(() => setEnabled(true));
+
+        return() => {
+            cancelAnimationFrame(animation);
+            setEnabled(false);
+        }
+    }, []);
+
+    if(!enabled) {
+        return null;
+    }
+
     return(
     <>
-        <div className="TodoList_complete_list" /* key={WhatListLength} */>
+        {/* <div className="TodoList_complete_list text1">
             <input type="text" value={item.text} onChange={editItemText} className="TodoList_complete_input" readOnly="readonly"/>
             <input type="checkbox" checked={item.isComplete} onChange={toggleItemCompletion} />
+
             <button onClick={deleteItem}>X</button>
-        </div>
+        </div> */}
+        <Draggable key={item.id} item={item} draggableId={item.id} index={item}>
+            {(provided) => (
+                <div ref={provided.innerRef}
+                {...provided.draggableProps}
+                {...provided.dragHandleProps}
+                >
+                    {item.text}
+                </div>
+            )}
+        </Draggable>
     </>
         
     )
