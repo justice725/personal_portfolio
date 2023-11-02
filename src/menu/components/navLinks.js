@@ -1,6 +1,6 @@
 import App from "../../App";
 import BlogWrap from "../../miniBlog/components/blogWrap";
-import TodoWrap from "../../todoList/components/todolistWrap";
+import TodoWrap from "../../todoList/components/TodoWrap";
 import LogoType from "./logobox/logotype";
 // 컴포넌트 임포트
 

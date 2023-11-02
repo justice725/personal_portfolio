@@ -75,6 +75,11 @@
     --bg-el4:#DEE2E6;
     --border3:#DEE2E6;
     --border4:#F1F3F5;
+
+    --primary1: #304ffe;
+    --alert1:#ff3d00;
+    --defaultPrimary: #3d5afe;
+    --defaultAlert : #fafafa;
 }
 
 [data-theme="dark"] {
@@ -88,6 +93,11 @@
     --bg-el4: #2E2E2E;
     --border3:#4D4D4D;
     --border4:#2A2A2A;
+
+    --primary1: #536dfe;
+    --alert1:#ff9e80;
+    --defaultPrimary: #3d5afe;
+    --defaultAlert : #fafafa;
 }
 
 .nav_ani:hover {

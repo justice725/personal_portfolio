@@ -5,28 +5,29 @@ import {
 } from 'recoil';
 //recoil root
 
-import { todoListFilterState } from "../atoms/todoListState";
+import {todoListFilterState} from "../atoms/todoListState";
 
 function TodoListFilters() {
     const [filter, setFilter] = useRecoilState(todoListFilterState);
 
-    const updateFilter = ({target:{value}}) => {
+    const updateFilter = ({target: {value}}) => {
         setFilter(value);
     };
 
-    return(
+    return (
         <>
-        <div className="filterBox">
-            <span className="text1">필터 :</span>
-            <select value={filter} onChange={updateFilter} className="text3 todosSelectTit bg_el4">
-                <option value="Show All">전체보기</option>
-                <option value="Show Completed">완료된 할 일 보기</option>
-                <option value="Show Uncompleted">미완료된 할 일 보기</option>
-            </select>
-        </div>
+            <div className="filterBox">
+                <span className="text1">필터 :</span>
+                <select value={filter} onChange={updateFilter} className="text3 todosSelectTit bg_el4">
+                    <option value="Show All">전체보기</option>
+                    <option value="Show Completed">완료된 할 일 보기</option>
+                    <option value="Show Uncompleted">미완료된 할 일 보기</option>
+                </select>
+            </div>
         </>
     )
 }
+
 // 몇 줄의 코드로 우리는 필터링 기능을 구현할 수 있다. 우리는 TodoListStats 컴포넌트를 구현하기 위해 동일한 개념을 사용할 것이다.
 
 // 우리는 다음 통계를 표시하려고 한다.

@@ -1,32 +1,42 @@
 //recoil root
-import React, { useEffect, useState } from "react";
+import React, {useState} from "react";
 import {
     useRecoilState
 } from 'recoil';
 //recoil root
-import { Draggable } from "react-beautiful-dnd";
+import {Draggable} from "react-beautiful-dnd";
 
 
-import { todoListState } from "../atoms/todoListState";
+import {todoListState} from "../atoms/todoListState";
 
+/*
+function doAjax() {
+    ajax: ({ 
+        url: '/todolist/set', 
+        dataType: 'application/json', 
+        data: {todoList: todoList}
+    })
+} */
 
-function TodoItem({item, plusState}) {
+function TodoItem({item, plusState, key, draggableId}) {
     const [todoList, setTodoList] = useRecoilState(todoListState);
-    const index = todoList.findIndex((listItem) => listItem === item );
+    const index = todoList.findIndex((listItem) => listItem === item);
+    // const toStringIndex = index.toString();
+    // console.log(toStringIndex);
 
-    const editItemText = ({target : {value}}) => {
+    const editItemText = (e) => {
+        const newValue = e.target.value;
         const newList = replaceItemAtIndex(todoList, index, {
             ...item,
-            text:value,
+            text: newValue,
         });
-
         setTodoList(newList);
     } // 추가하기
 
     const toggleItemCompletion = () => {
         const newList = replaceItemAtIndex(todoList, index, {
             ...item,
-            isComplete:!item.isComplete,
+            isComplete: !item.isComplete,
         });
 
         setTodoList(newList);
@@ -38,57 +48,33 @@ function TodoItem({item, plusState}) {
         setTodoList(newList);
     } // 리스트 삭제
 
-    /* const onDragEnd = ({source, destination}) => {
-        if(!destination) return;
+    return (
+        <>
+            {/* <Draggable key={index} draggableId={toStringIndex} index={index}> */}
+            <Draggable key={index} draggableId={`${index}`} index={index}>
+                {(provided) => (
+                    <div ref={provided.innerRef}
+                         {...provided.draggableProps}
+                         {...provided.dragHandleProps}
+                    >
+                        <input type="text" id="todoListTextInput" value={item.text} onChange={editItemText}
+                               className="todoEditInput"/>
+                        <label for="todoListTextInput" className="todoText">{item.text}</label>
+                        <input type="checkbox" checked={item.isComplete} onChange={toggleItemCompletion}
+                               className="todoCompleteInput"/>
+                        <button onClick={deleteItem} className="todoDeleteButton">X</button>
+                        {/* {item.text} */}
 
-        const scourceKey = source.droppableId;
-        const destinationKey = destination.droppableId;
+                    </div>
+                )}
+            </Draggable>
+        </>
 
-        const _items = JSON.parse(JSON.stringify(items));
-        const [targetItem] = _items[scourceKey].splice(source.index, 1);
-        _items[destinationKey].splice(destination.index,0,targetItem);
-        setItems(_items);
-    } */
-
-    const [enabled, setEnabled] = useState(false);
-    useEffect(() => {
-        const animation = requestAnimationFrame(() => setEnabled(true));
-
-        return() => {
-            cancelAnimationFrame(animation);
-            setEnabled(false);
-        }
-    }, []);
-
-    if(!enabled) {
-        return null;
-    }
-
-    return(
-    <>
-        {/* <div className="TodoList_complete_list text1">
-            <input type="text" value={item.text} onChange={editItemText} className="TodoList_complete_input" readOnly="readonly"/>
-            <input type="checkbox" checked={item.isComplete} onChange={toggleItemCompletion} />
-
-            <button onClick={deleteItem}>X</button>
-        </div> */}
-        <Draggable key={item.id} item={item} draggableId={item.id} index={item}>
-            {(provided) => (
-                <div ref={provided.innerRef}
-                {...provided.draggableProps}
-                {...provided.dragHandleProps}
-                >
-                    {item.text}
-                </div>
-            )}
-        </Draggable>
-    </>
-        
     )
 }
 
-function replaceItemAtIndex( arr, index, newValue ) {
-    return [...arr.slice(0,index), newValue, ...arr.slice(index + 1)];
+function replaceItemAtIndex(arr, index, newValue) {
+    return [...arr.slice(0, index), newValue, ...arr.slice(index + 1)];
 } // 리스트 추가 함수
 
 function removeItemAtIndex(arr, index) {

@@ -14,7 +14,7 @@ import '../../publicSource/css/public.scss';
 import { styled } from "styled-components";
 import ScrollProgress from "../../publicSource/components/scroll/ScrollProgress";
 
-function GlobalHeader() {
+function GlobalHeader({headerRef}) {
   /* const navigate = useNavigate();
 
   const goToTodolist = () => {
@@ -27,7 +27,7 @@ function GlobalHeader() {
   
     return (
       <HeaderWrapper>
-        <header className="globalHeaderWrap">
+        <header className="globalHeaderWrap" ref={headerRef}>
           <Nav></Nav>
         </header>
         <ScrollProgress></ScrollProgress>
@@ -42,6 +42,7 @@ const HeaderWrapper = styled.div`
   position:fixed;
   top:0;
   left:0;
+  z-index: 9999;
 `
 
 export default GlobalHeader;

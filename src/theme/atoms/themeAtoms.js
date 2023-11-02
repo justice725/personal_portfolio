@@ -15,6 +15,11 @@ const localStorageEffect = // 페이지 로딩시 테마 적용하기 위해서 
                 ? localStorage.removeItem(key)
                 : localStorage.setItem(key, JSON.stringify(newValue));
         })
+        // setSelf : atom 값을 설정한다. 주로 Storage에 있는 데이터를 atom에 넣어줄 때 사용한다.
+        // OnSet : atom의 변화를 감지해 Storage에 데이터를 저장한다.
+
+        // 주의사항 : 데이터를 저장할 땐 '문자열'만 저장이 가능하기 때문에 json 데이터를 저장할 땐 JSON.stringify()를 이용해 문자열로 변환해주고,
+        // atom에 Storage 데이터를 저장할 땐 JSON.parse()를 이용해 문자열을 Json 형식으로 변환해줘야 한다.
     }
 
 
@@ -22,28 +27,6 @@ export const themesAtom = atom({
     key:'themesAtoms',
     default:'light',
     effects:[localStorageEffect('light')], // 스토리지에 등록되어 있을 값 초기는 light
-    /* effects: [
-        ({setSelf, onSet}) => {
-            const savedData = sessionStorage.getItem('');
-            // setSelf : atom 값을 설정 혹은 재설정
-            if(savedData) setSelf(JSON.parse(savedData));
-
-            // atom이 변화가 감지될 때 작동, Storage에 데이터 저장
-            // setSelf에 의해서는 작동하지 않음
-
-            onSet((newValue, _, isReset) => {
-                isReset
-                    ? sessionStorage.removeItem('')
-                    : sessionStorage.setItem('', JSON.stringify(newValue));
-            });
-        }
-
-        // setSelf : atom 값을 설정한다. 주로 Storage에 있는 데이터를 atom에 넣어줄 때 사용한다.
-        // OnSet : atom의 변화를 감지해 Storage에 데이터를 저장한다.
-
-        // 주의사항 : 데이터를 저장할 땐 '문자열'만 저장이 가능하기 때문에 json 데이터를 저장할 땐 JSON.stringify()를 이용해 문자열로 변환해주고, 
-        // atom에 Storage 데이터를 저장할 땐 JSON.parse()를 이용해 문자열을 Json 형식으로 변환해줘야 한다.
-    ] */
 });
 
 export const lightTheme = {
@@ -66,6 +49,13 @@ export const lightTheme = {
     border2: '#ADB5BD',
     border3: '#DEE2E6',
     border4: '#F1F3F5',
+
+    // primary style
+    defaultPrimary: '#3d5afe',
+    defaultAlert: '#fafafa',
+
+    primary1: '#304ffe',
+    alert1:'#ff3d00',
 };
 
 export const darkTheme = {
@@ -88,6 +78,13 @@ export const darkTheme = {
     border2: '#A0A0A0',
     border3: '#4D4D4D',
     border4: '#2A2A2A',
+
+    // primary style
+    defaultPrimary: '#3d5afe',
+    defaultAlert: '#fafafa',
+
+    primary1: '#536dfe',
+    alert1:'#ff9e80',
 };
 
 const cssVar = (name) => `var(--${name})`;

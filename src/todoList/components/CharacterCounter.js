@@ -1,16 +1,12 @@
 //recoil root
 import React from "react";
 import {
-  RecoilRoot,
-  atom,
-  selector,
-  useRecoilState,
-  useRecoilValue,
+    useRecoilValue
 } from 'recoil';
 //recoil root
 
+import { charCountState } from '../selectors/charCountStateSelectors';
 import TextInput from './TextInput';
-import {charCountState} from '../selectors/charCountStateSelectors';
 
 
 function CharacterCounter() {

@@ -75,6 +75,22 @@ export const GlobalStyle = createGlobalStyle`
     .br3 {
         border-color:${themedPalette.border3};
     }
+
+    .defaultPrimary {
+        color:${({theme}) => theme.defaultPrimary};
+    }
+
+    .defaultAlert {
+        color:${({theme}) => theme.defaultAlert};
+    }
+
+    .primary1 {
+        color:${({theme}) => theme.primary1};
+    }
+
+    .alert1 {
+        color:${({theme}) => theme.alert1};
+    }
     
 `;
 // themedPalette -> styled-components에서 css variable 사용하는 방법--
