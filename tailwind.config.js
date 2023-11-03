@@ -10,6 +10,13 @@ module.exports = {
       tablet:'750px',
       desktop:'1400px',
     },
+    container: {
+      padding: {
+        DEFAULT: '2rem',
+        tablet: '6rem',
+        desktop: '8rem',
+      },
+    },
     extend: {},
   },
   plugins: [],

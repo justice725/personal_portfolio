@@ -20,6 +20,7 @@ code {
 
 html, body {
   @apply min-h-full;
+  width: 100%;
 }
 
 /*html {
@@ -28,4 +29,39 @@ html, body {
 
 body {
   @apply relative;
+  color: #1B242C;
+}
+
+button {
+  border: 1px solid #007cbd;
+  box-sizing: border-box;
+  padding: 7px 23px;
+  background-color: #ffffff;
+  color: #007CBD;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+button:hover,button:active,button:focus {
+  background-color: #00466b;
+  color: #ffffff;
+  border-color: #00466b;
+}
+
+input[type=text] {
+  background-color: #ffffff;
+  border: 1px solid #F0F3F5;
+  border-radius: 4px;
+  outline: none;
+  color: #9EA8B3;
+  padding: 0 7px;
+  transition: all 0.2s;
+}
+
+input[type=text]:focus,input[type=text]:active {
+  border-color: #9EA8B3;
+}
+
+input[type=text]:focus::placeholder,input[type=text]:active::placeholder {
+  color: #ffffff;
 }

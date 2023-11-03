@@ -50,7 +50,7 @@ function App() {
 
             <GlobalHeader headerRef={headerRef} key={`global_header`}/>
 
-            <div style={{marginTop: headerHeight}} key={`route_box`}> {/*헤더 크기만큼 루트 컴포넌트가 마진을 잡도록 하기*/}
+            <div style={{marginTop: headerHeight}} key={`route_box`} className='w-full'> {/*헤더 크기만큼 루트 컴포넌트가 마진을 잡도록 하기*/}
                 <Routes>
 
                     {
@@ -61,7 +61,7 @@ function App() {
 
                 </Routes>
             </div>
-            <div style={{height: "300vh"}}></div>
+            {/*<div style={{height: "300vh"}}></div>*/}
 
         </ThemeProvider>
     );
