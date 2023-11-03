@@ -9,6 +9,7 @@ import {Routes, Route, Link} from "react-router-dom";
 // css
 import './publicSource/css/public.scss';
 import './theme/css/darkmode.scss';
+// import '../index.css';
 // css
 
 // theme

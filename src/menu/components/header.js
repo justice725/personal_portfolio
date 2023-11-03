@@ -28,7 +28,9 @@ function GlobalHeader({headerRef}) {
     return (
       <HeaderWrapper>
         <header className="globalHeaderWrap" ref={headerRef}>
-          <Nav></Nav>
+          <Nav>
+              <span className="inline-block w-8 h-8 bg-blue-500 rounded" />
+          </Nav>
         </header>
         <ScrollProgress></ScrollProgress>
       </HeaderWrapper>

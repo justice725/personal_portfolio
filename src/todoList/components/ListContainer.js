@@ -31,12 +31,12 @@ const ListContainer = ({items, setItems, droppableId, naming}) => {
     }, []);
 
     return (
-        <div className="list_wrap">
-            <div className="list_wrap_bg bg_el1">
+        <div className="list_wrap relative">
+            <div className="list_wrap_bg bg_el1 relative">
                 <Droppable droppableId={droppableId}>
                     {(provided) => (
-                        <div ref={provided.innerRef} {...provided.droppableProps} className='list_box drag_box'>
-                            <h2>{naming}</h2>
+                        <div ref={provided.innerRef} {...provided.droppableProps} className='list_box drag_box flex flex-col gap-[1rem] px-[1rem] relative'>
+                            <h2 className="font-bold">{naming}</h2>
                             {items.map((item, index) => (
                                 <Draggable key={item.id} draggableId={item.id} index={index}>
                                     {(provided,snapshot) => (
@@ -44,11 +44,7 @@ const ListContainer = ({items, setItems, droppableId, naming}) => {
                                             ref={provided.innerRef}
                                             {...provided.draggableProps}
                                             {...provided.dragHandleProps}
-                                            className="todo_item"
-                                            style={{
-                                                backgroundColor: snapshot.isDragging ? 'blue' : 'grey',
-                                                ...provided.draggableProps.style,
-                                            }}
+                                            className={"todo_item bg-white rounded-[5px] p-[1rem]" + (snapshot.isDragging ? ' drop-shadow-[0_1px_10px_rgba(0,0,0,0.3)]' : ' drop-shadow-[2px_1px_3px_rgba(0,0,0,0.3)]')}
                                         >
                                             {item.title}
                                         </div>
