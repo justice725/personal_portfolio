@@ -2,10 +2,12 @@ import App from "../../App";
 import BlogWrap from "../../miniBlog/components/blogWrap";
 import TodoWrap from "../../todoList/components/TodoWrap";
 import LogoType from "./logobox/logotype";
+import MainWrap from "../../portfolio/components/PortfolioWrap";
+import PortfolioWrap from "../../portfolio/components/PortfolioWrap";
 // 컴포넌트 임포트
 
 const navLinks = [
-    {title : 'home', link: '/', ruth:"", img:<LogoType/>}, // 임시 홈화면
+    {title : 'home', link: '/', ruth:<PortfolioWrap />, img:<LogoType/>}, // 임시 홈화면
     {title : 'blog', link: '/blog', ruth: <BlogWrap />, img:""},
     {title : 'todolist', link: '/todolist', ruth: <TodoWrap/>, img:""},
     /* {title : 'home', link: '/'}, */
