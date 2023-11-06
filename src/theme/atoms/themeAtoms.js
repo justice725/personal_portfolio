@@ -41,6 +41,7 @@ export const lightTheme = {
     bg_element2: '#F8F9FA', // 태그, 좋아요/공유 영역, 다음 페이지
     bg_element3: '#FFFFFF', // 답글, 토클 스위치 등
     bg_element4: '#DEE2E6', // bg_element3에 호버 효과가 필요한 경우
+    bg_element5: '#ffffff',
     text1: '#212529',
     text2: '#495057',
     text3: '#868E96',
@@ -70,6 +71,7 @@ export const darkTheme = {
     bg_element2: '#1E1E1E',
     bg_element3: '#252525',
     bg_element4: '#2E2E2E',
+    bg_element5: '#DEE2E6',
     text1: '#ECECEC',
     text2: '#D9D9D9',
     text3: '#ACACAC',

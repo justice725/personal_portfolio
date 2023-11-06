@@ -66,13 +66,15 @@
 /* :root theme */
 [data-theme="light"] {
     --background:#fff;
-    --text:#000;
+    --text:#1B242C;
+    --input-text:#1B242C;
     --cursor-point:pointer;
 
     --bg-el1: #E9ECEF;
     --bg-el2: #F8F9FA;
     --bg-el3: #FFFFFF;
     --bg-el4:#DEE2E6;
+    --bg-el5:#ffffff;
     --border3:#DEE2E6;
     --border4:#F1F3F5;
 
@@ -85,12 +87,14 @@
 [data-theme="dark"] {
     --background:#000;
     --text:#fff;
+    --input-text:#1B242C;
     --cursor-point:pointer;
 
     --bg-el1: #1E1E1E;
     --bg-el2: #1E1E1E;
     --bg-el3: #252525;
     --bg-el4: #2E2E2E;
+    --bg-el5:#DEE2E6;
     --border3:#4D4D4D;
     --border4:#2A2A2A;
 

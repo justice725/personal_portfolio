@@ -30,7 +30,7 @@ function App() {
 
     if (theme) {
         document.documentElement.setAttribute('data-theme', theme);
-    }
+    } // 테마 변경
 
     const headerRef = useRef(null)
     const [headerHeight, setHeaderHeight] = useState(null)
@@ -40,9 +40,7 @@ function App() {
             const heightCurrent = headerRef.current.clientHeight;
             setHeaderHeight(heightCurrent);
         }
-    }, [GlobalHeader]);
-
-    console.log(headerHeight)
+    }, [GlobalHeader]); // 헤더 크기에 따라서 컨텐츠 margin-top 값 조절
 
     return (
         <ThemeProvider theme={theme == 'light' ? lightTheme : darkTheme}>

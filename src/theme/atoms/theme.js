@@ -27,6 +27,10 @@ export const GlobalStyle = createGlobalStyle`
         background-color: ${({theme}) => theme.bg_element4};
     }
     
+    .bg_el5 {
+        background-color: ${({theme}) => theme.bg_element5};
+    }
+    
     .text1 {
         color:${({theme}) => theme.text1};
     }
