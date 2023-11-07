@@ -2,7 +2,7 @@ import SectionCard from "../../../menu/components/SectionCard";
 
 const JoinSection = () => {
     return (
-        <section className='relative flex flex-col max-w-[1280px] m-0 mx-auto '>
+        <section className='relative flex flex-col max-w-[1280px] m-0 mx-auto gap-[3rem] pt-[7rem]'>
             <SectionCard>
                 <div className='flex flex-col'>
                     <div className='flex flex-row'>
@@ -26,6 +26,9 @@ const JoinSection = () => {
                     <li>맡은 일은 반드시 끝내고야 마는 강인한 <strong>책임감과 집념</strong>의 소유자입니다.</li>
                     <li><strong>좋은 코드에 대한 고민</strong>에 더해서, 비즈니스적 임팩트까지 신경쓸 수 있는 개발자가 되고 싶어요!</li>
                 </ul>
+            </SectionCard>
+            <SectionCard>
+                <p>꿈은 없고, 그냥 놀고 먹고 싶습니다. 정신을 못차리겠어요. 인생은 왜 요지경일까요</p>
             </SectionCard>
         </section>
     )
