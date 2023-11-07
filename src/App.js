@@ -52,8 +52,8 @@ function App() {
                 <Routes>
 
                     {
-                        navLinks.map((nav) => (
-                            <Route path={nav.link} element={nav.ruth}></Route>
+                        navLinks.map((nav, idx) => (
+                            <Route path={nav.link} element={nav.ruth} key={idx}></Route>
                         ))
                     }
 

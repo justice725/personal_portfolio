@@ -3,7 +3,7 @@ import {ReactComponent as LogoImage } from './logoType.svg';
 const LogoType = () => {
     return(
         <>
-            <LogoImage width={30} className='logoPadding'/>
+            <LogoImage width={30} height={30} className='logoPadding'/>
         </>
     )
 }
