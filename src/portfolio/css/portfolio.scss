@@ -18,3 +18,19 @@ li.circle_list {
     }
   }
 }
+
+a.link {
+  transition: all 0.2s;
+  color: var(--defaultAlert);
+  &:hover, &:active, &:focus {
+    color: var(--bg-circle);
+  }
+}
+
+h1,h2,h3,h4,h5,h6,span,p,li,div {
+  color:var(--text)
+}
+
+div, ul, li, a, button {
+  position: relative;
+}

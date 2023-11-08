@@ -107,6 +107,14 @@ export const GlobalStyle = createGlobalStyle`
     .bg_sticker {
       background-color: ${({theme}) => theme.bg_sticker};
     }
+
+    .bg_circle {
+        background-color: ${({theme}) => theme.bg_circle};
+    }
+
+    .inner_box {
+        background-color: ${({theme}) => theme.inner_box};
+    }
     
 `;
 // themedPalette -> styled-components에서 css variable 사용하는 방법--

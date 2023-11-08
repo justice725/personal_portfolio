@@ -10,7 +10,7 @@ const Footer = () => {
                     </p>
                     </div>
                     <div>
-                        <a href="#" className='text-[#ffffff] text-[0.7rem] font-thin'>
+                        <a href="https://blog.naver.com/justice725" className='text-[0.7rem] font-thin link' target="_blank">
                             blog
                         </a>
                     </div>
