@@ -9,7 +9,7 @@ const JoinSection = () => {
                         <img src="" alt="#" width={160} height={160}/>
                         <div>
                             <h2 className='leading-[1.15] text-[3.5rem] font-bold'>
-                                안녕하세요, <br/>프론트엔드 개발자 <br/><span>박찬민</span>입니다.
+                                {/*안녕하세요, <br/>프론트엔드 개발자 <br/><span>박찬민</span>입니다.*/}
                             </h2>
                         </div>
                     </div>

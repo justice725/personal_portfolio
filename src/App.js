@@ -21,6 +21,7 @@ import {darkTheme, lightTheme, themesAtom} from './theme/atoms/themeAtoms';
 // header
 import GlobalHeader from './menu/components/header';
 import navLinks from "./menu/components/navLinks";
+import Footer from "./publicSource/components/Footer";
 
 // header
 
@@ -61,6 +62,7 @@ function App() {
             </div>
             {/*<div style={{height: "300vh"}}></div>*/}
 
+            <Footer />
         </ThemeProvider>
     );
 }
