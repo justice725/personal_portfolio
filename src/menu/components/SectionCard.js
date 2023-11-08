@@ -1,6 +1,6 @@
-const SectionCard = ({children}) => {
+const SectionCard = ({children, bg}) => {
     return(
-        <div className='bg-white rounded-[30px] shadow-[0_3px_7px_rgba(0,0,0,0.4)] p-[30px]'>
+        <div className={'rounded-[30px] shadow-[0_3px_7px_rgba(0,0,0,0.4)] p-[30px]' + (bg ? ` ${bg}` : ' bg-white')}>
             {children}
         </div>
     )

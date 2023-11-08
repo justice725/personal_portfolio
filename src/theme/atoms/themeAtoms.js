@@ -42,14 +42,18 @@ export const lightTheme = {
     bg_element3: '#FFFFFF', // 답글, 토클 스위치 등
     bg_element4: '#DEE2E6', // bg_element3에 호버 효과가 필요한 경우
     bg_element5: '#ffffff',
+    bg_sticker:'#121212',
     text1: '#212529',
     text2: '#495057',
     text3: '#868E96',
     text4: '#CED4DA',
+    textReverse: '#ECECEC',
+    title1:'#212529',
     border1: '#343A40',
     border2: '#ADB5BD',
     border3: '#DEE2E6',
     border4: '#F1F3F5',
+    border5: '#F1F3F5',
 
     // primary style
     defaultPrimary: '#3d5afe',
@@ -72,14 +76,18 @@ export const darkTheme = {
     bg_element3: '#252525',
     bg_element4: '#2E2E2E',
     bg_element5: '#DEE2E6',
+    bg_sticker:'#DEE2E6',
     text1: '#ECECEC',
     text2: '#D9D9D9',
     text3: '#ACACAC',
     text4: '#595959',
+    textReverse: '#212529',
+    title1:'#595959',
     border1: '#E0E0E0',
     border2: '#A0A0A0',
     border3: '#4D4D4D',
     border4: '#2A2A2A',
+    border5:'#E0E0E0',
 
     // primary style
     defaultPrimary: '#3d5afe',

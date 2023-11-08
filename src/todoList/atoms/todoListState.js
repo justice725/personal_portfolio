@@ -6,8 +6,6 @@ export const todoListState = atom({
         {id:'1', title:'여기는 todo-list들을 만들고 관리하는 공간이에요.'},
         {id:'2', title:'새로운 많은 기능들을 추가하려고 계획하고 있어요.'},
         {id:'3', title:'새로운 리스트들을 추가하고 드래그도 해보며 놀아보세요!'},
-        {id:'4', title:'송원정 바보'},
-        {id:'5', title:'송원정 대머리'},
     ],
 });
 

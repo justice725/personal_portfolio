@@ -48,23 +48,31 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     .border1 {
-        border: 1px solid ${({theme}) => theme.border1};
+        border-color: ${({theme}) => theme.border1};
     }
     
     .border2 {
-        border: 1px solid ${({theme}) => theme.border2};
+        border-color: ${({theme}) => theme.border2};
     }
 
     .border3 {
-        border: 1px solid ${({theme}) => theme.border3};
+        border-color: ${({theme}) => theme.border3};
     }
 
     .border4 {
-        border: 1px solid ${({theme}) => theme.border4};
+        border-color: ${({theme}) => theme.border4};
+    }
+    
+    .textReverse {
+      color: ${({theme}) => theme.textReverse};
     }
 
     .themeToggleText {
         color:${({theme}) => theme.text1};
+    }
+    
+    .title1 {
+      color:${({theme}) => theme.title1};
     }
 
     .cssVar {
@@ -94,6 +102,10 @@ export const GlobalStyle = createGlobalStyle`
 
     .alert1 {
         color:${({theme}) => theme.alert1};
+    }
+    
+    .bg_sticker {
+      background-color: ${({theme}) => theme.bg_sticker};
     }
     
 `;
