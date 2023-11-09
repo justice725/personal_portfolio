@@ -1,5 +1,5 @@
 import SectionCard from "../../../menu/components/SectionCard";
-import Profile from '../../img/profile.png'
+import Profile from '../../img/profile_5.png'
 
 const JoinSection = () => {
     return (
