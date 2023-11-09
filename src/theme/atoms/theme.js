@@ -116,6 +116,14 @@ export const GlobalStyle = createGlobalStyle`
         background-color: ${({theme}) => theme.inner_box};
     }
     
+    .link_btn {
+      background-color: ${({theme}) => theme.linkBtn};
+    }
+    
+    .link_color {
+      color:${({theme}) => theme.linkColor};
+    }
+    
 `;
 // themedPalette -> styled-components에서 css variable 사용하는 방법--
 // themeAtoms.js 에서 초기 세팅 및 변수화 진행

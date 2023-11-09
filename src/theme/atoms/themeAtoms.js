@@ -57,6 +57,8 @@ export const lightTheme = {
     border5: '#F1F3F5',
 
     inner_box:'#fafafa',
+    linkBtn:'#9EA8B3',
+    linkColor:'#ffffff',
 
     // primary style
     defaultPrimary: '#3d5afe',
@@ -94,6 +96,8 @@ export const darkTheme = {
     border5:'#E0E0E0',
 
     inner_box:'#c9c9c9',
+    linkBtn:'#9EA8B3',
+    linkColor:'#ffffff',
 
     // primary style
     defaultPrimary: '#3d5afe',

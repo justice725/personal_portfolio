@@ -34,3 +34,15 @@ h1,h2,h3,h4,h5,h6,span,p,li,div {
 div, ul, li, a, button {
   position: relative;
 }
+
+.service_link {
+  transition: all 0.2s;
+  background-color: var(--link-btn);
+  &:hover, &:active, &:focus {
+    background-color: var(--bg-circle);
+  }
+}
+
+.stack_box {
+  display: inline-flex;
+}

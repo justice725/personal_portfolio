@@ -9,9 +9,12 @@ const Footer = () => {
                         Published by React.Js
                     </p>
                     </div>
-                    <div>
-                        <a href="https://blog.naver.com/justice725" className='text-[0.7rem] font-thin link' target="_blank">
+                    <div className='flex gap-[1rem]'>
+                        <a href="https://blog.naver.com/justice725" className='text-[0.7rem] font-thin link' target="_blank" rel="noreferrer">
                             blog
+                        </a>
+                        <a href="https://github.com/justice725/personal_portfolio" className='text-[0.7rem] font-thin link' target="_blank" rel="noreferrer">
+                            github
                         </a>
                     </div>
                 </div>

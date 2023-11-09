@@ -12,26 +12,29 @@ const WorkExperience = () => {
                         </h2>
                     </div>
                     <div className='flex flex-col tablet:flex-row gap-[2rem] mt-[2rem]'>
-                        <div>
-                            <div className="w-[160px] h-[160px] border-box relative p-[0.5rem] flex justify-center items-center rounded-[10px] bg-white">
+                        <div className='flex flex-row tablet:flex-col gap-[2rem] tablet:gap-[0.4rem]'>
+                            <div
+                                className="w-[100px] h-[100px] border-box relative p-[0.5rem] flex justify-center items-center rounded-[10px] bg-white">
                                 <img src={euclidLogo} alt="#" className="w-full"/>
                             </div>
-                            <h2 className='font-bold text-[1.25rem] title1'>유클리드소프트</h2>
-                            <p>UI/UX Engineer</p>
+                            <div>
+                                <h2 className='font-bold text-[1.25rem] title1 tablet:mb-[0.2rem]'>유클리드소프트</h2>
+                                <p>UI/UX Engineer</p>
                             <p>2023.05 - 재직중</p>
+                            </div>
                         </div>
                         <div>
                         <div className='border-l-[1px] border5 '>
                             <div className='border-box p-[1rem] '>
-                                <h2 className="font-bold text-[1.25rem] ">Home-Service</h2>
+                                <h2 className="font-bold text-[1.25rem] ">Home-Service <a href="https://euclidsoft.co.kr/" target={'_blank'} rel="noreferrer" className='text-[0.7rem] link_color border-box p-[0.3rem] px-[0.5rem] rounded-[15px] service_link'>link</a></h2>
                                 <div className="relative border-box p-[1rem] inner_box rounded-[25px] title1 shadow-md my-[1rem]">유클리드소프트 홈페이지 서비스의 개발 및 유지보수, UI/UX 개선을 담당하고 있습니다.</div>
-                                <div className='flex flex-row justify-start items-center gap-[0.35rem] my-[0.3rem]'>
-                                    <p className='textReverse flex border-box p-[0.3rem] bg_sticker rounded-full text-[0.7rem] '>Next.js</p>
-                                    <p className='textReverse flex border-box p-[0.3rem] bg_sticker rounded-full text-[0.7rem] '>Framer motion</p>
-                                    <p className='textReverse flex border-box p-[0.3rem] bg_sticker rounded-full text-[0.7rem] '>tailwind css</p>
-                                    <p className='textReverse flex border-box p-[0.3rem] bg_sticker rounded-full text-[0.7rem] '>Recoil</p>
-                                    <p className='textReverse flex border-box p-[0.3rem] bg_sticker rounded-full text-[0.7rem] '>slick-corousel</p>
-                                    <p className='textReverse flex border-box p-[0.3rem] bg_sticker rounded-full text-[0.7rem] '>scss</p>
+                                <div className='flex flex-row justify-start items-center gap-[0.35rem] my-[0.3rem] flex-wrap'>
+                                    <p className='textReverse flex border-box p-[0.3rem] px-[0.5rem] bg_sticker rounded-full text-[0.7rem] '>Next.js</p>
+                                    <p className='textReverse flex border-box p-[0.3rem] px-[0.5rem] bg_sticker rounded-full text-[0.7rem] '>Framer motion</p>
+                                    <p className='textReverse flex border-box p-[0.3rem] px-[0.5rem] bg_sticker rounded-full text-[0.7rem] '>tailwind css</p>
+                                    <p className='textReverse flex border-box p-[0.3rem] px-[0.5rem] bg_sticker rounded-full text-[0.7rem] '>Recoil</p>
+                                    <p className='textReverse flex border-box p-[0.3rem] px-[0.5rem] bg_sticker rounded-full text-[0.7rem] '>slick-corousel</p>
+                                    <p className='textReverse flex border-box p-[0.3rem] px-[0.5rem] bg_sticker rounded-full text-[0.7rem] '>scss</p>
                                 </div>
                                 <div>
                                     <ul className='flex flex-col'>
@@ -84,7 +87,7 @@ const WorkExperience = () => {
                         </div>
                         <div className='border-l-[1px] border5 '>
                             <div className='border-box p-[1rem] '>
-                                <h2 className="font-bold text-[1.25rem] ">AI-Labeling Platform</h2>
+                                <h2 className="font-bold text-[1.25rem] ">AI-Labeling Platform <a href="https://www.labelon.kr/" target={'_blank'} rel="noreferrer" className='text-[0.7rem] link_color border-box p-[0.3rem] px-[0.5rem] rounded-[15px] service_link'>link</a></h2>
                                 <div className="relative border-box p-[1rem] inner_box rounded-[25px] title1 shadow-md my-[1rem]">AI 학습데이터를 구축하는 프로젝트에서 소프트웨어를 유지보수 및 개선하는 작업을 진행하였습니다.</div>
                                 {/*<div className='flex flex-row justify-start items-center gap-[0.35rem] my-[0.3rem]'>
                                     <p className='textReverse flex border-box p-[0.3rem] bg_sticker rounded-full text-[0.7rem] '>Next.js</p>
@@ -128,12 +131,12 @@ const WorkExperience = () => {
                             <div className='border-box p-[1rem] '>
                                 <h2 className="font-bold text-[1.25rem] ">Clinical Decision Support System</h2>
                                 <div className="relative border-box p-[1rem] inner_box rounded-[25px] title1 shadow-md my-[1rem]">환자 개인 임상정보를 바탕으로 질병 진단 및 의사결정을 도와주는 프로그램에서 공통 컴포넌트 개발 및 유지보수를 담당하고 있습니다.</div>
-                                <div className='flex flex-row justify-start items-center gap-[0.35rem] my-[0.3rem]'>
-                                    <p className='textReverse flex border-box p-[0.3rem] bg_sticker rounded-full text-[0.7rem] '>React.js</p>
-                                    <p className='textReverse flex border-box p-[0.3rem] bg_sticker rounded-full text-[0.7rem] '>Bootstrap</p>
-                                    <p className='textReverse flex border-box p-[0.3rem] bg_sticker rounded-full text-[0.7rem] '>React Query</p>
-                                    <p className='textReverse flex border-box p-[0.3rem] bg_sticker rounded-full text-[0.7rem] '>Redux</p>
-                                    <p className='textReverse flex border-box p-[0.3rem] bg_sticker rounded-full text-[0.7rem] '>scss</p>
+                                <div className='flex flex-row justify-start items-center gap-[0.35rem] my-[0.3rem] flex-wrap'>
+                                    <p className='textReverse flex border-box p-[0.3rem] bg_sticker rounded-full text-[0.7rem] px-[0.5rem]'>React.js</p>
+                                    <p className='textReverse flex border-box p-[0.3rem] bg_sticker rounded-full text-[0.7rem] px-[0.5rem]'>Bootstrap</p>
+                                    <p className='textReverse flex border-box p-[0.3rem] bg_sticker rounded-full text-[0.7rem] px-[0.5rem]'>React Query</p>
+                                    <p className='textReverse flex border-box p-[0.3rem] bg_sticker rounded-full text-[0.7rem] px-[0.5rem]'>Redux</p>
+                                    <p className='textReverse flex border-box p-[0.3rem] bg_sticker rounded-full text-[0.7rem] px-[0.5rem] '>scss</p>
                                 </div>
                                 <div>
                                     <ul className='flex flex-col'>
@@ -173,24 +176,27 @@ const WorkExperience = () => {
                         </div>
                     </div>
                     <div className='flex flex-col tablet:flex-row gap-[2rem] mt-[2rem]'>
-                        <div>
-                        <div className="w-[160px] h-[160px] border-box relative p-[0.5rem] flex justify-center items-center rounded-[10px] bg-white">
+                        <div className='flex flex-row tablet:flex-col gap-[2rem] tablet:gap-[0.4rem]'>
+                            <div
+                                className="w-[100px] h-[100px] border-box relative p-[0.5rem] flex justify-center items-center rounded-[10px] bg-white">
                                 <img src={cennoLogo} alt="#" className="w-full"/>
                             </div>
-                            <h2 className='font-bold text-[1.25rem] title1'>첸노</h2>
-                            <p>FrontEnd Engineer</p>
+                            <div>
+                                <h2 className='font-bold text-[1.25rem] title1 tablet:mb-[0.2rem]'>첸노</h2>
+                                <p>FrontEnd Engineer</p>
                             <p>2022.03 - 2023.01</p>
+                            </div>
                         </div>
                         <div className="flex-auto">
                             <div className='border-l-[1px] border5 '>
                                 <div className='border-box p-[1rem] '>
-                                    <h2 className="font-bold text-[1.25rem] ">Home-Service</h2>
+                                    <h2 className="font-bold text-[1.25rem] ">Home-Service <a href="http://www.cenno.co.kr/" target={'_blank'} rel="noreferrer" className='text-[0.7rem] link_color border-box p-[0.3rem] px-[0.5rem] rounded-[15px] service_link'>link</a></h2>
                                     <div className="relative border-box p-[1rem] inner_box rounded-[25px] title1 shadow-md my-[1rem]">자사 홈페이지 고도화 작업에서 FrontEnd 개발을 진행하였습니다.</div>
-                                    <div className='flex flex-row justify-start items-center gap-[0.35rem] my-[0.3rem]'>
-                                        <p className='textReverse flex border-box p-[0.3rem] bg_sticker rounded-full text-[0.7rem] '>Html</p>
-                                        <p className='textReverse flex border-box p-[0.3rem] bg_sticker rounded-full text-[0.7rem] '>Css</p>
-                                        <p className='textReverse flex border-box p-[0.3rem] bg_sticker rounded-full text-[0.7rem] '>Javascript</p>
-                                        <p className='textReverse flex border-box p-[0.3rem] bg_sticker rounded-full text-[0.7rem] '>JQuery</p>
+                                    <div className='flex flex-row justify-start items-center gap-[0.35rem] my-[0.3rem] flex-wrap'>
+                                        <p className='textReverse flex border-box p-[0.3rem] bg_sticker rounded-full text-[0.7rem] px-[0.5rem] '>Html</p>
+                                        <p className='textReverse flex border-box p-[0.3rem] bg_sticker rounded-full text-[0.7rem] px-[0.5rem] '>Css</p>
+                                        <p className='textReverse flex border-box p-[0.3rem] bg_sticker rounded-full text-[0.7rem] px-[0.5rem] '>Javascript</p>
+                                        <p className='textReverse flex border-box p-[0.3rem] bg_sticker rounded-full text-[0.7rem] px-[0.5rem] '>JQuery</p>
                                         
                                     </div>
                                     <div>
@@ -214,13 +220,13 @@ const WorkExperience = () => {
                             </div>
                             <div className='border-l-[1px] border5 '>
                                 <div className='border-box p-[1rem] '>
-                                    <h2 className="font-bold text-[1.25rem] ">Web Agency Business</h2>
+                                    <h2 className="font-bold text-[1.25rem] ">Web Agency Business <a href="http://cenno.co.kr/export/html_sub/portfolio.html" target={'_blank'} rel="noreferrer" className='text-[0.7rem] link_color border-box p-[0.3rem] px-[0.5rem] rounded-[15px] service_link'>link</a></h2>
                                     <div className="relative border-box p-[1rem] inner_box rounded-[25px] title1 shadow-md my-[1rem]">웹에이전시 사업에 FrontEnd 개발 참여하였습니다.</div>
-                                    <div className='flex flex-row justify-start items-center gap-[0.35rem] my-[0.3rem]'>
-                                        <p className='textReverse flex border-box p-[0.3rem] bg_sticker rounded-full text-[0.7rem] '>Html</p>
-                                        <p className='textReverse flex border-box p-[0.3rem] bg_sticker rounded-full text-[0.7rem] '>Css</p>
-                                        <p className='textReverse flex border-box p-[0.3rem] bg_sticker rounded-full text-[0.7rem] '>Javascript</p>
-                                        <p className='textReverse flex border-box p-[0.3rem] bg_sticker rounded-full text-[0.7rem] '>JQuery</p>
+                                    <div className='flex flex-row justify-start items-center gap-[0.35rem] my-[0.3rem] flex-wrap'>
+                                        <p className='textReverse flex border-box p-[0.3rem] bg_sticker rounded-full text-[0.7rem] px-[0.5rem] '>Html</p>
+                                        <p className='textReverse flex border-box p-[0.3rem] bg_sticker rounded-full text-[0.7rem] px-[0.5rem] '>Css</p>
+                                        <p className='textReverse flex border-box p-[0.3rem] bg_sticker rounded-full text-[0.7rem] px-[0.5rem] '>Javascript</p>
+                                        <p className='textReverse flex border-box p-[0.3rem] bg_sticker rounded-full text-[0.7rem] px-[0.5rem] '>JQuery</p>
                                         
                                     </div>
                                     <div>
@@ -246,18 +252,21 @@ const WorkExperience = () => {
                         
                     </div>
                     <div className='flex flex-col tablet:flex-row gap-[2rem] mt-[2rem]'>
-                        <div>
-                        <div className="w-[160px] h-[160px] border-box relative p-[0.5rem] flex justify-center items-center rounded-[10px] bg-white">
+                        <div className='flex flex-row tablet:flex-col gap-[2rem] tablet:gap-[0.4rem]'>
+                            <div
+                                className="w-[100px] h-[100px] border-box relative p-[0.5rem] flex justify-center items-center rounded-[10px] bg-white">
                                 <img src={cennoLogo} alt="#" className="w-full"/>
                             </div>
-                            <h2 className='font-bold text-[1.25rem] title1'>첸노</h2>
-                            <p>Web Designer & <br/>UI/UX Engineer</p>
+                            <div>
+                                <h2 className='font-bold text-[1.25rem] title1 tablet:mb-[0.2rem]'>첸노</h2>
+                                <p>Web Designer & <br/>UI/UX Engineer</p>
                             <p>2021.12 - 2022.03</p>
+                            </div>
                         </div>
                         <div>
                             <div className='border-l-[1px] border5 '>
                                 <div className='border-box p-[1rem] '>
-                                    <h2 className="font-bold text-[1.25rem] ">Design</h2>
+                                    <h2 className="font-bold text-[1.25rem] ">Design <a href="http://cenno.co.kr/export/html_sub/portfolio_3.html" target={'_blank'} rel="noreferrer" className='text-[0.7rem] link_color border-box p-[0.3rem] px-[0.5rem] rounded-[15px] service_link'>link</a></h2>
                                     <div className="relative border-box p-[1rem] inner_box rounded-[25px] title1 shadow-md my-[1rem]">마케팅 및 웹 에이전시 사업의 일환으로 수많은 웹 기반 디자인 작업물 및 자사 제품의 제품 디자인 작업물의 제작과 광고성 웹 퍼블리싱 등의 업무를 담당했습니다.</div>
                                     
                                     <div>
