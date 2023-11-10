@@ -45,7 +45,7 @@ const ScrollProgress = memo(() => {
 const ScrollProgressBox = styled.div `
     width:100%;
     height:4px;
-    background-color:gray;
+    background-color:#868E96;
     position:relative;
 
     z-index:10;
@@ -54,7 +54,7 @@ const ScrollProgressBox = styled.div `
 
 const ScrollProgress_progress = styled.div`
     height:100%;
-    background-color:blue;
+    background-color:#3d5afe;
 `
 
 export default ScrollProgress;
