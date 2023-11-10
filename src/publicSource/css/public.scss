@@ -86,6 +86,7 @@
     --alert1:#ff3d00;
     --defaultPrimary: #3d5afe;
     --defaultAlert : #fafafa;
+    --textColor:#fff;
 }
 
 [data-theme="dark"] {
@@ -110,6 +111,8 @@
     --alert1:#ff9e80;
     --defaultPrimary: #3d5afe;
     --defaultAlert : #fafafa;
+
+    --textColor:#007CBD;
 }
 
 .nav_ani:hover {
@@ -119,6 +122,10 @@
 /* :root theme */
 
 /* default */
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
 body {
     /* background: var(--background); */
     line-height: 1.6;
@@ -127,6 +134,7 @@ body {
     overflow-x: hidden;
     /* padding-left: 2rem;
     padding-right: 2rem; */
+    width: 100%;
 }
 
 ul {

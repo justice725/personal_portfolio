@@ -3,7 +3,7 @@ import React, {useEffect, useRef, useState} from "react";
 import {
     useRecoilState
 } from 'recoil';
-import {Routes, Route, Link} from "react-router-dom";
+import {Routes, Route, Link, useSearchParams, useParams, useLocation} from "react-router-dom";
 
 
 // css
@@ -26,8 +26,8 @@ import Footer from "./publicSource/components/Footer";
 // header
 
 function App() {
-
     const [theme, setTheme] = useRecoilState(themesAtom);
+    const currentLoaction = useLocation()
 
     if (theme) {
         document.documentElement.setAttribute('data-theme', theme);
@@ -49,7 +49,7 @@ function App() {
 
             <GlobalHeader headerRef={headerRef} key={`global_header`}/>
 
-            <div style={{marginTop: headerHeight}} key={`route_box`} className='w-full'> {/*헤더 크기만큼 루트 컴포넌트가 마진을 잡도록 하기*/}
+            <div style={{marginTop: headerHeight}} key={`route_box`} className={'w-full' + (currentLoaction.pathname == '/todolist' || currentLoaction.pathname == '/blog' ? ' min-h-[80vh]' : '')}> {/*헤더 크기만큼 루트 컴포넌트가 마진을 잡도록 하기*/}
                 <Routes>
 
                     {

@@ -46,3 +46,16 @@ div, ul, li, a, button {
 .stack_box {
   display: inline-flex;
 }
+
+a {
+  &.blog_link_btn {
+    transition: all 0.2s;
+    background-color: var(--defaultPrimary);
+    color: var(--textColor);
+    &:hover, &:focus, &:active {
+      /*background-color: var(--);*/
+      background-color: var(--textColor);
+      color:var(--defaultPrimary);
+    }
+  }
+}
