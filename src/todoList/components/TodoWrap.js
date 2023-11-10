@@ -76,7 +76,15 @@ function TodoWrap() {
         <>
             <DragDropContext onDragEnd={(e) => onDragEnd(e)}>
                 <div className='todoInputWrap px-[1rem] pt-[3rem] flex flex-row gap-[1rem] tablet:flex-row'>
-                    <input type="text" className='todoEditInput flex-auto py-[0.5rem] tablet:py-[0rem]' id='todoListTextInput' placeholder='새로운 할 일을 입력하세요' value={newTodo} onChange={(e) => setNewTodo(e.target.value)} />
+                    <input type="text" className='todoEditInput flex-auto py-[0.5rem] tablet:py-[0rem]'
+                           id='todoListTextInput' placeholder='새로운 할 일을 입력하세요' value={newTodo}
+                           onChange={(e) => setNewTodo(e.target.value)}
+                           onKeyPress={(e) => {
+                               if (e.key === 'Enter') {
+                                   handleAddTodo();
+                               }
+                           }}
+                    />
                     <button onClick={handleAddTodo} className='w-fit border-[1px]'>리스트 추가</button>
                 </div>
                 <div className='todoListWrap_flex flex-col tablet:flex-row'>
