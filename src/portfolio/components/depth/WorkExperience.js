@@ -18,7 +18,7 @@ const WorkExperience = () => {
                                 <img src={euclidLogo} alt="#" className="w-full"/>
                             </div>
                             <div>
-                                <h2 className='font-bold text-[1.25rem] title1 tablet:mb-[0.2rem]'>유클리드소프트</h2>
+                                <h2 className='font-bold text-[1.25rem] title2 tablet:mb-[0.2rem]'>유클리드소프트</h2>
                                 <p>UI/UX Engineer</p>
                             <p>2023.05 - 재직중</p>
                             </div>
@@ -182,7 +182,7 @@ const WorkExperience = () => {
                                 <img src={cennoLogo} alt="#" className="w-full"/>
                             </div>
                             <div>
-                                <h2 className='font-bold text-[1.25rem] title1 tablet:mb-[0.2rem]'>첸노</h2>
+                                <h2 className='font-bold text-[1.25rem] title2 tablet:mb-[0.2rem]'>첸노</h2>
                                 <p>FrontEnd Engineer</p>
                             <p>2022.03 - 2023.01</p>
                             </div>
@@ -258,7 +258,7 @@ const WorkExperience = () => {
                                 <img src={cennoLogo} alt="#" className="w-full"/>
                             </div>
                             <div>
-                                <h2 className='font-bold text-[1.25rem] title1 tablet:mb-[0.2rem]'>첸노</h2>
+                                <h2 className='font-bold text-[1.25rem] title2 tablet:mb-[0.2rem]'>첸노</h2>
                                 <p>Web Designer & <br/>UI/UX Engineer</p>
                             <p>2021.12 - 2022.03</p>
                             </div>

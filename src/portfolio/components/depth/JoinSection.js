@@ -8,9 +8,9 @@ const JoinSection = () => {
                 <div className='flex flex-col'>
                     <div className='flex flex-col tablet:flex-row gap-[1rem] tablet:gap-[3rem] items-center'>
                         <img src={Profile} alt="#" width={180} height={180}
-                             className='w-[100px] h-[100px] tablet:w-[180px] tablet:h-[180px]'/>
+                             className='w-[180px] h-[180px] tablet:w-[180px] tablet:h-[180px]'/>
                         <div>
-                            <h2 className='leading-[1.15] text-[2rem] tablet:text-[3.5rem] font-bold break-all'>
+                            <h2 className='leading-[1.15] text-[2rem] tablet:text-[3.5rem] font-bold tablet:break-all break-keep'>
                                 안녕하세요, <br className='hidden tablet:block'/>프론트엔드 개발자 <br
                                 className='hidden tablet:block'/><span className="defaultPrimary">박찬민</span>입니다.
                             </h2>

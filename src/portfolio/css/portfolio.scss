@@ -50,12 +50,12 @@ div, ul, li, a, button {
 a {
   &.blog_link_btn {
     transition: all 0.2s;
-    background-color: var(--defaultPrimary);
-    color: var(--textColor);
+    background-color: var(--buttonBack);
+    color: var(--buttonColor);
     &:hover, &:focus, &:active {
       /*background-color: var(--);*/
-      background-color: var(--textColor);
-      color:var(--defaultPrimary);
+      background-color: var(--buttonColor);
+    color: var(--buttonBack);
     }
   }
 }

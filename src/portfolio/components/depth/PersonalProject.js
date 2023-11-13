@@ -20,7 +20,7 @@ const PersonalProject = () => {
                                 <LogoImage width={50} height={50}/>
                             </div>
                             <div>
-                                <h2 className='font-bold text-[1.25rem] title1 tablet:mb-[0.2rem]'>개인 포트폴리오</h2>
+                                <h2 className='font-bold text-[1.25rem] title2 tablet:mb-[0.2rem]'>개인 포트폴리오</h2>
                                 <p>2023.07 - 2023.11</p>
                             </div>
                         </div>
@@ -60,9 +60,11 @@ const PersonalProject = () => {
                                                 <div className="flex">
                                                     <span
                                                         className="circle_point w-[5px] h-[5px] min-w-[5px] min-h-[5px] mr-[8px] bg_circle inline-flex rounded-[51%] mt-[11.5px]"></span>
+                                                    <div>
                                                     <span className='stack_box'>Styled-components</span>와 <span
                                                     className='stack_box'>Scss</span> 그리고 <span
                                                     className='stack_box'>Localstorage</span>를 사용해서 다크모드를 구현했어요.
+                                                    </div>
                                                 </div>
                                             </li>
                                             <li className="">

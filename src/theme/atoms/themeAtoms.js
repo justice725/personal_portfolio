@@ -50,6 +50,7 @@ export const lightTheme = {
     text4: '#CED4DA',
     textReverse: '#ECECEC',
     title1:'#212529',
+    title2:'#212529',
     border1: '#343A40',
     border2: '#ADB5BD',
     border3: '#DEE2E6',
@@ -66,6 +67,10 @@ export const lightTheme = {
 
     primary1: '#304ffe',
     alert1:'#ff3d00',
+
+    footer:'#ADB5BD',
+    buttonBack:'#3d5afe',
+    buttonColor:'#fafafa',
 };
 
 export const darkTheme = {
@@ -88,14 +93,15 @@ export const darkTheme = {
     text3: '#ACACAC',
     text4: '#595959',
     textReverse: '#212529',
-    title1:'#595959',
+    title1:'#212529',
+    title2:'#ffffff',
     border1: '#E0E0E0',
     border2: '#A0A0A0',
     border3: '#4D4D4D',
     border4: '#2A2A2A',
     border5:'#E0E0E0',
 
-    inner_box:'#c9c9c9',
+    inner_box:'#ECECEC',
     linkBtn:'#9EA8B3',
     linkColor:'#ffffff',
 
@@ -105,6 +111,9 @@ export const darkTheme = {
 
     primary1: '#536dfe',
     alert1:'#ff9e80',
+    footer:'#000000',
+    buttonBack:'#fafafa',
+    buttonColor:'#3d5afe',
 };
 
 const cssVar = (name) => `var(--${name})`;

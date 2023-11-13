@@ -74,6 +74,10 @@ export const GlobalStyle = createGlobalStyle`
     .title1 {
       color:${({theme}) => theme.title1};
     }
+    
+    .title2 {
+      color:${({theme}) => theme.title2};
+    }
 
     .cssVar {
         color:${themedPalette.text};
@@ -122,6 +126,18 @@ export const GlobalStyle = createGlobalStyle`
     
     .link_color {
       color:${({theme}) => theme.linkColor};
+    }
+    
+    .footer {
+      background-color: ${({theme}) => theme.footer};
+    }
+    
+    .buttonBack {
+      background-color: ${({theme}) => theme.buttonBack};
+    }
+    
+    .buttonColor {
+      color:${({theme}) => theme.buttonColor};
     }
     
 `;
