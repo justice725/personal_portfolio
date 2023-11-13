@@ -4,7 +4,7 @@ import {
     useRecoilState
 } from 'recoil';
 import {Routes, Route, Link, useSearchParams, useParams, useLocation} from "react-router-dom";
-
+import ReactGA from 'react-ga';
 
 // css
 import './publicSource/css/public.scss';
@@ -26,6 +26,12 @@ import Footer from "./publicSource/components/Footer";
 // header
 
 function App() {
+
+    const gaTrakingId = process.env.REACT_APP_GA_TRACKING_ID // 환경변수에 저장된 추적 ID 가져오기
+    ReactGA.initialize(gaTrakingId, {debug:true}) // react-ga 초기화 및 debug 사용
+    ReactGA.pageview(window.location.pathname) // 추적하려는 페이지 설정
+
+
     const [theme, setTheme] = useRecoilState(themesAtom);
     const currentLoaction = useLocation()
 
