@@ -1,18 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {BrowserRouter, useSearchParams} from 'react-router-dom';
-import { RecoilRoot } from 'recoil';
+import {RecoilRoot} from 'recoil';
 import App from './App';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+import ReactGA from "react-ga4";
+
+// 구글 애널리틱스 운영서버만 적용
+if (process.env.REACT_APP_GOOGLE_ANALYTICS) {
+    ReactGA.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS)
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <RecoilRoot>
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
-      <App />
-      </BrowserRouter>
-  </RecoilRoot>
+    <RecoilRoot>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
+            <App/>
+        </BrowserRouter>
+    </RecoilRoot>
 );
 
 // If you want to start measuring performance in your app, pass a function

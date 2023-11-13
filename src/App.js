@@ -4,7 +4,7 @@ import {
     useRecoilState
 } from 'recoil';
 import {Routes, Route, Link, useSearchParams, useParams, useLocation} from "react-router-dom";
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
 // css
 import './publicSource/css/public.scss';
@@ -22,14 +22,16 @@ import {darkTheme, lightTheme, themesAtom} from './theme/atoms/themeAtoms';
 import GlobalHeader from './menu/components/header';
 import navLinks from "./menu/components/navLinks";
 import Footer from "./publicSource/components/Footer";
+import RouteChangeTracker from "./RouteChangeTracker";
 
 // header
 
 function App() {
+    RouteChangeTracker()
 
-    const gaTrakingId = process.env.REACT_APP_GA_TRACKING_ID // 환경변수에 저장된 추적 ID 가져오기
+    /*const gaTrakingId = process.env.REACT_APP_GA_TRACKING_ID // 환경변수에 저장된 추적 ID 가져오기
     ReactGA.initialize(gaTrakingId, {debug:true}) // react-ga 초기화 및 debug 사용
-    ReactGA.pageview(window.location.pathname) // 추적하려는 페이지 설정
+    ReactGA.pageview(window.location.pathname) // 추적하려는 페이지 설정*/
 
 
     const [theme, setTheme] = useRecoilState(themesAtom);
