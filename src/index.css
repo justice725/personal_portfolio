@@ -32,7 +32,7 @@ body {
 
 }
 
-button {
+button.custom_button {
   border: 1px solid #007cbd;
   box-sizing: border-box;
   padding: 7px 23px;
@@ -42,7 +42,7 @@ button {
   transition: all 0.2s;
 }
 
-button:hover,button:active,button:focus {
+button.custom_button:hover,button.custom_button:active,button.custom_button:focus {
   background-color: #00466b;
   color: #ffffff;
   border-color: #00466b;

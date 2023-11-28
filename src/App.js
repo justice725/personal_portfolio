@@ -23,6 +23,8 @@ import GlobalHeader from './menu/components/header';
 import navLinks from "./menu/components/navLinks";
 import Footer from "./publicSource/components/Footer";
 import RouteChangeTracker from "./RouteChangeTracker";
+import {PageLoadAtom} from "./portfolio/atoms/pageLoading";
+import Loading from "./portfolio/components/Loading";
 
 // header
 
@@ -36,6 +38,7 @@ function App() {
 
     const [theme, setTheme] = useRecoilState(themesAtom);
     const currentLoaction = useLocation()
+    const [isPageLoaded, setIsPageLoaded] = useRecoilState(PageLoadAtom);
 
     if (theme) {
         document.documentElement.setAttribute('data-theme', theme);
@@ -51,28 +54,43 @@ function App() {
         }
     }, [GlobalHeader]); // 헤더 크기에 따라서 컨텐츠 margin-top 값 조절
 
+    useEffect(() => {
+        if(!isPageLoaded) {
+            setTimeout(()=> {
+                setIsPageLoaded(true)
+            }, 3000)
+        }
+    }, [isPageLoaded]);
+
     return (
-        <ThemeProvider theme={theme == 'light' ? lightTheme : darkTheme}>
-            <GlobalStyle key={`global`}/>
+        <>
+            {!isPageLoaded ? (
+                <Loading/>
+            ) : (
+                <ThemeProvider theme={theme == 'light' ? lightTheme : darkTheme}>
+                    <GlobalStyle key={`global`}/>
 
-            <GlobalHeader headerRef={headerRef} key={`global_header`}/>
+                    <GlobalHeader headerRef={headerRef} key={`global_header`}/>
 
-            <div style={{marginTop: headerHeight}} key={`route_box`} className={'w-full' + (currentLoaction.pathname == '/todolist' || currentLoaction.pathname == '/blog' ? ' min-h-[80vh]' : '')}> {/*헤더 크기만큼 루트 컴포넌트가 마진을 잡도록 하기*/}
-                <Routes>
+                    <div style={{marginTop: headerHeight}} key={`route_box`}
+                         className={'w-full' + (currentLoaction.pathname == '/todolist' || currentLoaction.pathname == '/blog' ? ' min-h-[80vh]' : '')}> {/*헤더 크기만큼 루트 컴포넌트가 마진을 잡도록 하기*/}
+                        <Routes>
 
-                    {
-                        navLinks.map((nav, idx) => (
-                            <Route path={nav.link} element={nav.ruth} key={idx}></Route>
-                        ))
-                    }
+                            {
+                                navLinks.map((nav, idx) => (
+                                    <Route path={nav.link} element={nav.ruth} key={idx}></Route>
+                                ))
+                            }
 
-                </Routes>
-            </div>
-            {/*<div style={{height: "300vh"}}></div>*/}
+                        </Routes>
+                    </div>
+                    {/*<div style={{height: "300vh"}}></div>*/}
 
-            <Footer />
-        </ThemeProvider>
-    );
+                    <Footer/>
+                </ThemeProvider>
+            )}
+        </>
+    )
 }
 
 export default App;

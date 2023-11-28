@@ -85,7 +85,7 @@ function TodoWrap() {
                                }
                            }}
                     />
-                    <button onClick={handleAddTodo} className='w-fit border-[1px]'>리스트 추가</button>
+                    <button onClick={handleAddTodo} className='w-fit border-[1px] custom_button'>리스트 추가</button>
                 </div>
                 <div className='todoListWrap_flex flex-col tablet:flex-row'>
                     {/*<TodoListCurrent />

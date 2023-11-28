@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "framer-motion": "^10.16.5",
     "gh-pages": "^6.0.0",
     "react": "^18.2.0",
     "react-beautiful-dnd": "^13.1.1",
@@ -48,6 +49,8 @@
   },
   "devDependencies": {
     "@types/react-beautiful-dnd": "^13.1.4",
+    "suneditor": "^2.45.1",
+    "suneditor-react": "^3.6.1",
     "tailwindcss": "^3.3.5"
   },
   "homepage": "https://justice725.github.io/personal_portfolio/"
