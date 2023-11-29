@@ -64,12 +64,12 @@ function App() {
 
     return (
         <>
+            <ThemeProvider theme={theme == 'light' ? lightTheme : darkTheme}>
+                <GlobalStyle key={`global`}/>
             {!isPageLoaded ? (
-                <Loading/>
+                    <Loading/>
             ) : (
-                <ThemeProvider theme={theme == 'light' ? lightTheme : darkTheme}>
-                    <GlobalStyle key={`global`}/>
-
+                <>
                     <GlobalHeader headerRef={headerRef} key={`global_header`}/>
 
                     <div style={{marginTop: headerHeight}} key={`route_box`}
@@ -87,8 +87,9 @@ function App() {
                     {/*<div style={{height: "300vh"}}></div>*/}
 
                     <Footer/>
-                </ThemeProvider>
+                </>
             )}
+            </ThemeProvider>
         </>
     )
 }

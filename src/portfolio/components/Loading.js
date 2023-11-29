@@ -24,7 +24,7 @@ const item = {
 
 const Letter = ({letter}) => {
     return (
-        <motion.span className='inline-block' variants={item}  >
+        <motion.span className='inline-block text1' variants={item}  >
             {letter}
         </motion.span>
     )
@@ -34,7 +34,7 @@ const Loading = () => {
     return (
         <>
             <AnimatePresence>
-                <section className='w-screen h-screen flex justify-center items-center relative gap-[10px]'
+                <section className='w-screen h-screen flex justify-center items-center relative gap-[10px] bg_2'
                                 key={"1"}>
                     <motion.div className='relative w-[30px] h-[30px]'>
                         <motion.div transition={{type: 'spring', duration:2, delay:0.1}}
