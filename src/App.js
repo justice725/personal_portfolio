@@ -73,7 +73,7 @@ function App() {
                     <GlobalHeader headerRef={headerRef} key={`global_header`}/>
 
                     <div style={{marginTop: headerHeight}} key={`route_box`}
-                         className={'w-full' + (currentLoaction.pathname == '/todolist' || currentLoaction.pathname == '/blog' ? ' min-h-[80vh]' : '')}> {/*헤더 크기만큼 루트 컴포넌트가 마진을 잡도록 하기*/}
+                         className={'w-full' + (currentLoaction.pathname == '/todolist' || currentLoaction.pathname == '/blog' ? ' min-h-[80vh] py-[50px]' : '')}> {/*헤더 크기만큼 루트 컴포넌트가 마진을 잡도록 하기*/}
                         <Routes>
 
                             {

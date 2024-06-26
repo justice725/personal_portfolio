@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "firebase": "^10.12.2",
     "framer-motion": "^10.16.5",
     "gh-pages": "^6.0.0",
     "react": "^18.2.0",
@@ -19,7 +20,8 @@
     "recoil": "^0.7.7",
     "sass": "^1.63.6",
     "styled-components": "^6.0.2",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "yarn": "^1.22.22"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -53,5 +55,6 @@
     "suneditor-react": "^3.6.1",
     "tailwindcss": "^3.3.5"
   },
-  "homepage": "https://justice725.github.io/personal_portfolio/"
+  "homepage": "https://justice725.github.io/personal_portfolio/",
+  "packageManager": "yarn@4.3.1"
 }
